@@ -52,3 +52,9 @@ I also want to see the distance between AR object and my phone.
 
 **Object is not in the screen - Primary Course:**
 1. System does nothing
+
+---
+
+## App Architecture
+
+![](Architecture-Diagram.png)
