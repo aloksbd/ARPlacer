@@ -6,32 +6,8 @@
 //
 
 import XCTest
+import ARPlacer
 import ARKit
-
-class ARPlacerSessionDelegate: NSObject, ARSessionDelegate {
-    var sessionFailedWithError: ((String) -> Void)?
-    var onLimited: (() -> Void)?
-    var onNotAvailable: (() -> Void)?
-    var onNormal: (() -> Void)?
-    
-    func session(_ session: ARSession, didFailWithError error: Error) {
-        sessionFailedWithError?(error.localizedDescription)
-    }
-    
-    func session(_ session: ARSession, cameraDidChangeTrackingState camera: ARCamera) {
-        
-        func session(_ session: ARSession, cameraDidChangeTrackingState camera: ARCamera) {
-            switch camera.trackingState {
-            case .limited :
-                onLimited?()
-            case .notAvailable:
-                onNotAvailable?()
-            case .normal:
-                onNormal?()
-            }
-        }
-    }
-}
 
 class ARPlacerTests: XCTestCase {
     
