@@ -18,16 +18,13 @@ public class ARPlacerSessionDelegate: NSObject, ARSessionDelegate {
     }
     
     public func session(_ session: ARSession, cameraDidChangeTrackingState camera: ARCamera) {
-        
-        func session(_ session: ARSession, cameraDidChangeTrackingState camera: ARCamera) {
-            switch camera.trackingState {
-            case .limited :
-                onLimited?()
-            case .notAvailable:
-                onNotAvailable?()
-            case .normal:
-                onNormal?()
-            }
+        switch camera.trackingState {
+        case .limited :
+            onLimited?()
+        case .notAvailable:
+            onNotAvailable?()
+        case .normal:
+            onNormal?()
         }
     }
 }
