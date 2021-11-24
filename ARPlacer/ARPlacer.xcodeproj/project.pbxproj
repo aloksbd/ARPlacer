@@ -14,6 +14,9 @@
 		5CA925C2274E39DA0026F0A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CA925C0274E39DA0026F0A7 /* LaunchScreen.storyboard */; };
 		5CA925CF274E469F0026F0A7 /* ARPlacerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925CE274E469F0026F0A7 /* ARPlacerTests.swift */; };
 		5CA925D7274E4E280026F0A7 /* ARPlacerSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925D6274E4E280026F0A7 /* ARPlacerSessionDelegate.swift */; };
+		5CA925DA274E51590026F0A7 /* ARPlacerInformationPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925D9274E51590026F0A7 /* ARPlacerInformationPresenterTests.swift */; };
+		5CA925DC274E51C80026F0A7 /* ARPlacerInformationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925DB274E51C80026F0A7 /* ARPlacerInformationPresenter.swift */; };
+		5CA925E0274E56C10026F0A7 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925DF274E56C10026F0A7 /* InformationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		5CA925CC274E469F0026F0A7 /* ARPlacerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARPlacerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CA925CE274E469F0026F0A7 /* ARPlacerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPlacerTests.swift; sourceTree = "<group>"; };
 		5CA925D6274E4E280026F0A7 /* ARPlacerSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPlacerSessionDelegate.swift; sourceTree = "<group>"; };
+		5CA925D9274E51590026F0A7 /* ARPlacerInformationPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPlacerInformationPresenterTests.swift; sourceTree = "<group>"; };
+		5CA925DB274E51C80026F0A7 /* ARPlacerInformationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPlacerInformationPresenter.swift; sourceTree = "<group>"; };
+		5CA925DF274E56C10026F0A7 /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				5CA925CE274E469F0026F0A7 /* ARPlacerTests.swift */,
+				5CA925D9274E51590026F0A7 /* ARPlacerInformationPresenterTests.swift */,
 			);
 			path = ARPlacerTests;
 			sourceTree = "<group>";
@@ -99,8 +106,26 @@
 			isa = PBXGroup;
 			children = (
 				5CA925D6274E4E280026F0A7 /* ARPlacerSessionDelegate.swift */,
+				5CA925DD274E54220026F0A7 /* Presentation */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		5CA925DD274E54220026F0A7 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				5CA925DE274E56A00026F0A7 /* PresentableViews */,
+				5CA925DB274E51C80026F0A7 /* ARPlacerInformationPresenter.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		5CA925DE274E56A00026F0A7 /* PresentableViews */ = {
+			isa = PBXGroup;
+			children = (
+				5CA925DF274E56C10026F0A7 /* InformationView.swift */,
+			);
+			path = PresentableViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,7 +229,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CA925E0274E56C10026F0A7 /* InformationView.swift in Sources */,
 				5CA925BA274E39D70026F0A7 /* ViewController.swift in Sources */,
+				5CA925DC274E51C80026F0A7 /* ARPlacerInformationPresenter.swift in Sources */,
 				5CA925B6274E39D70026F0A7 /* AppDelegate.swift in Sources */,
 				5CA925D7274E4E280026F0A7 /* ARPlacerSessionDelegate.swift in Sources */,
 			);
@@ -215,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CA925CF274E469F0026F0A7 /* ARPlacerTests.swift in Sources */,
+				5CA925DA274E51590026F0A7 /* ARPlacerInformationPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
