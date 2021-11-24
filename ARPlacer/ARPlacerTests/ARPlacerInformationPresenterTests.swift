@@ -11,16 +11,30 @@ import ARPlacer
 class ARPlacerInformationPresenterTests: XCTestCase {
     
     func test_displaysInformationForScanningTheSurrounding() {
-        let informationView = InformationViewSpy()
-        let sut = ARPlacerInformationPresenter(informationView: informationView)
+        let (view, sut) = makeSUT()
         let information = "Please move your camera slowly to scan the surrounding"
         
         sut.showScanningInformation()
         
-        XCTAssertEqual(informationView.message, information)
+        XCTAssertEqual(view.message, information)
+    }
+    
+    func test_displaysInformationForScanningTheSurroundingWhenTrackingIsLimited() {
+        let (view, sut) = makeSUT()
+        let information = "Camera Tracking is off. \nPlease move your camera slowly to scan the surrounding"
+        
+        sut.showLimitedTrackingInformation()
+        
+        XCTAssertEqual(view.message, information)
     }
     
     //MARK: Helpers
+    
+    private func makeSUT() -> (view: InformationViewSpy, sut: ARPlacerInformationPresenter){
+        let view = InformationViewSpy()
+        let sut = ARPlacerInformationPresenter(informationView: view)
+        return (view, sut)
+    }
     
     private class InformationViewSpy: InformationView {
         private(set) var message: String?
@@ -31,5 +45,3 @@ class ARPlacerInformationPresenterTests: XCTestCase {
     }
 
 }
-
-
