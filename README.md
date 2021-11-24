@@ -19,10 +19,17 @@ I also want to see the distance between AR object and my phone.
 **Side Effect:**
 1. System should continue scanning the area throughout the app’s life time.
 
+**Camera tracking normal - Primary Course:**
+1. System should show user they can tap to place random object over the real world.
+
 **AR Session failed - Error Course:**
 1. Show error
+2. Give option to restart session
 
-**AR Session interrupted - Error Course:**
+**Camera tracking limited - Error Course:**
+1. Show error
+
+**Camera tracking not available - Error Course:**
 1. Show error
 
 ---
