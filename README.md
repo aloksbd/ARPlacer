@@ -1,6 +1,5 @@
 # ARPlacer
-Trying TDD with ARKit
-
+[![Build Status](https://app.travis-ci.com/aloksbd/ARPlacer.svg?branch=main)](https://app.travis-ci.com/aloksbd/ARPlacer)
 
 ## BDD Spec
 ```
