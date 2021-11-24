@@ -7,6 +7,7 @@
 
 public class ARPlacerInformationPresenter {
     private let informationView: InformationView
+    private let errorView: ErrorView
     private var scanningInformation: String {
         "Please move your camera slowly to scan the surrounding"
     }
@@ -14,8 +15,9 @@ public class ARPlacerInformationPresenter {
         "Camera Tracking is off. \nPlease move your camera slowly to scan the surrounding"
     }
     
-    public init(informationView: InformationView) {
+    public init(informationView: InformationView, errorView: ErrorView) {
         self.informationView = informationView
+        self.errorView = errorView
     }
     
     public func showScanningInformation() {
@@ -24,5 +26,9 @@ public class ARPlacerInformationPresenter {
     
     public func showLimitedTrackingInformation() {
         informationView.display(information: limitedTrackingInformation)
+    }
+    
+    public func sessionFailed(with error: String) {
+        errorView.display(error: error)
     }
 }

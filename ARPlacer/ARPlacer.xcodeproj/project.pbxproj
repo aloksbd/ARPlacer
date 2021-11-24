@@ -17,6 +17,7 @@
 		5CA925DA274E51590026F0A7 /* ARPlacerInformationPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925D9274E51590026F0A7 /* ARPlacerInformationPresenterTests.swift */; };
 		5CA925DC274E51C80026F0A7 /* ARPlacerInformationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925DB274E51C80026F0A7 /* ARPlacerInformationPresenter.swift */; };
 		5CA925E0274E56C10026F0A7 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925DF274E56C10026F0A7 /* InformationView.swift */; };
+		5CA925E2274E5E0D0026F0A7 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925E1274E5E0D0026F0A7 /* ErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		5CA925D9274E51590026F0A7 /* ARPlacerInformationPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPlacerInformationPresenterTests.swift; sourceTree = "<group>"; };
 		5CA925DB274E51C80026F0A7 /* ARPlacerInformationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPlacerInformationPresenter.swift; sourceTree = "<group>"; };
 		5CA925DF274E56C10026F0A7 /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
+		5CA925E1274E5E0D0026F0A7 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				5CA925DF274E56C10026F0A7 /* InformationView.swift */,
+				5CA925E1274E5E0D0026F0A7 /* ErrorView.swift */,
 			);
 			path = PresentableViews;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CA925E0274E56C10026F0A7 /* InformationView.swift in Sources */,
+				5CA925E2274E5E0D0026F0A7 /* ErrorView.swift in Sources */,
 				5CA925BA274E39D70026F0A7 /* ViewController.swift in Sources */,
 				5CA925DC274E51C80026F0A7 /* ARPlacerInformationPresenter.swift in Sources */,
 				5CA925B6274E39D70026F0A7 /* AppDelegate.swift in Sources */,
