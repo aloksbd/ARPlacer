@@ -21,4 +21,13 @@ public class ARPlacerSceneViewController {
     }
     
     @objc private func tap(_ gesture: UITapGestureRecognizer) { }
+    
+    func runSession() {
+        let configuration = ARWorldTrackingConfiguration()
+        sceneView.session.run(configuration)
+    }
+    
+    func pauseSession() {
+        sceneView.session.pause()
+    }
 }
