@@ -8,7 +8,9 @@
 import SceneKit
 
 public class RandomObjectCreator {
-    public static func create(randomNumberGenerator: () -> Int = { Int.random(in: 0...RandomObject.count) }) -> SCNNode {
+    private(set) public static var randomNumberGenerator = { Int.random(in: 0...RandomObject.count) }
+    
+    public static func create(randomNumberGenerator: () -> Int = randomNumberGenerator) -> SCNNode {
         let randomNumber = randomNumberGenerator()
         guard let randomObject = RandomObject(rawValue: randomNumber) else { return SCNNode() }
         return createNode(for: randomObject)
