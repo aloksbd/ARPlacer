@@ -29,21 +29,35 @@ public class RandomObjectCreator {
     
     private static func createSphere() -> SCNNode {
         let sphere = SCNSphere(radius: 0.05)
+        giveRandomColor(geometry: sphere)
         return createNode(geometry: sphere)
     }
     
     private static func createBox() -> SCNNode {
         let box = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
+        giveRandomColor(geometry: box)
         return createNode(geometry: box)
     }
     
     private static func createTorus() -> SCNNode {
         let torus = SCNTorus(ringRadius: 0.05, pipeRadius: 0.02)
+        giveRandomColor(geometry: torus)
         return createNode(geometry: torus)
     }
     
     private static func createNode(geometry: SCNGeometry) -> SCNNode {
-        let node = SCNNode(geometry: geometry)
-        return node
+        return SCNNode(geometry: geometry)
+    }
+    
+    private static func giveRandomColor(geometry: SCNGeometry) {
+        let red = randomColorRatio()
+        let green = randomColorRatio()
+        let blue = randomColorRatio()
+        let randomColor = UIColor(red: red, green: green, blue: blue, alpha: 1)
+        geometry.firstMaterial?.diffuse.contents = randomColor
+    }
+    
+    private static func randomColorRatio() -> CGFloat {
+        return CGFloat(Int.random(in: 0...10))/10
     }
 }
