@@ -23,6 +23,7 @@
 		5CA925E9274F2F460026F0A7 /* RandomObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925E8274F2F460026F0A7 /* RandomObject.swift */; };
 		5CA925F0274F9DDE0026F0A7 /* ARPlacerSceneViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925EF274F9DDE0026F0A7 /* ARPlacerSceneViewControllerTests.swift */; };
 		5CA925F3274FA3010026F0A7 /* ARPlacerSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925F2274FA3010026F0A7 /* ARPlacerSceneViewController.swift */; };
+		5CA925F62750D9DA0026F0A7 /* ARSCNView+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925F52750D9D90026F0A7 /* ARSCNView+TestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		5CA925E8274F2F460026F0A7 /* RandomObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomObject.swift; sourceTree = "<group>"; };
 		5CA925EF274F9DDE0026F0A7 /* ARPlacerSceneViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPlacerSceneViewControllerTests.swift; sourceTree = "<group>"; };
 		5CA925F2274FA3010026F0A7 /* ARPlacerSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPlacerSceneViewController.swift; sourceTree = "<group>"; };
+		5CA925F52750D9D90026F0A7 /* ARSCNView+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARSCNView+TestHelpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		5CA925CD274E469F0026F0A7 /* ARPlacerTests */ = {
 			isa = PBXGroup;
 			children = (
+				5CA925F42750D9B90026F0A7 /* Helpers */,
 				5CA925CE274E469F0026F0A7 /* ARPlacerTests.swift */,
 				5CA925D9274E51590026F0A7 /* ARPlacerInformationPresenterTests.swift */,
 				5CA925E3274F274E0026F0A7 /* RandomObjectCreatorTests.swift */,
@@ -160,6 +163,14 @@
 				5CA925F2274FA3010026F0A7 /* ARPlacerSceneViewController.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		5CA925F42750D9B90026F0A7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5CA925F52750D9D90026F0A7 /* ARSCNView+TestHelpers.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CA925CF274E469F0026F0A7 /* ARPlacerTests.swift in Sources */,
+				5CA925F62750D9DA0026F0A7 /* ARSCNView+TestHelpers.swift in Sources */,
 				5CA925F0274F9DDE0026F0A7 /* ARPlacerSceneViewControllerTests.swift in Sources */,
 				5CA925DA274E51590026F0A7 /* ARPlacerInformationPresenterTests.swift in Sources */,
 				5CA925E4274F274E0026F0A7 /* RandomObjectCreatorTests.swift in Sources */,

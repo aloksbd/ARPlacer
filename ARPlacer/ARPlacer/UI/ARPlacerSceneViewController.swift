@@ -7,11 +7,17 @@
 
 import ARKit
 
+public protocol ObjectPlacer {
+    func place(in position: CGPoint)
+}
+
 public class ARPlacerSceneViewController {
     private let sceneView: ARSCNView
+    private let objectPlacer: ObjectPlacer
     
-    public init(sceneView: ARSCNView) {
+    public init(sceneView: ARSCNView, objectPlacer: ObjectPlacer) {
         self.sceneView = sceneView
+        self.objectPlacer = objectPlacer
         addTapGestureRecognizer()
     }
     
@@ -20,7 +26,10 @@ public class ARPlacerSceneViewController {
         sceneView.addGestureRecognizer(tapGestureRecognizer)
     }
     
-    @objc private func tap(_ gesture: UITapGestureRecognizer) { }
+    @objc private func tap(_ gesture: UITapGestureRecognizer) {
+        let tappedPosition = gesture.location(in: sceneView)
+        objectPlacer.place(in: tappedPosition)
+    }
     
     func runSession() {
         let configuration = ARWorldTrackingConfiguration()
