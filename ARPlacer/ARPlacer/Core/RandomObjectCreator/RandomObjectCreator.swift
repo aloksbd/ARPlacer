@@ -20,6 +20,8 @@ public class RandomObjectCreator {
             return createSphere()
         case .box:
             return createBox()
+        case .torus:
+            return createTorus()
         }
     }
     
@@ -31,6 +33,11 @@ public class RandomObjectCreator {
     private static func createBox() -> SCNNode {
         let box = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
         return createNode(geometry: box)
+    }
+    
+    private static func createTorus() -> SCNNode {
+        let torus = SCNTorus(ringRadius: 0.05, pipeRadius: 0.02)
+        return createNode(geometry: torus)
     }
     
     private static func createNode(geometry: SCNGeometry) -> SCNNode {

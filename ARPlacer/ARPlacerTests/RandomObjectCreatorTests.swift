@@ -22,4 +22,10 @@ class RandomObjectCreatorTests: XCTestCase {
         let node = RandomObjectCreator.create(randomNumberGenerator: { rawValueForBox })
         XCTAssert(node.geometry is SCNBox)
     }
+    
+    func test_createReturnsTorusWhenRandomNumberIsRawValueForTorus() {
+        let rawValueForTorus = RandomObject.torus.rawValue
+        let node = RandomObjectCreator.create(randomNumberGenerator: { rawValueForTorus })
+        XCTAssert(node.geometry is SCNTorus)
+    }
 }

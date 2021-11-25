@@ -6,7 +6,7 @@
 //
 
 public enum RandomObject: Int {
-    case sphere, box
+    case sphere, torus, box
     
     // make sure box is last rawValue, or change the box below to the last case
     public static var count: Int { RandomObject.box.rawValue }
