@@ -16,4 +16,10 @@ class RandomObjectCreatorTests: XCTestCase {
         let node = RandomObjectCreator.create(randomNumberGenerator: { rawValueForSphere })
         XCTAssert(node.geometry is SCNSphere)
     }
+    
+    func test_createReturnsBoxWhenRandomNumberIsRawValueForBox() {
+        let rawValueForBox = RandomObject.box.rawValue
+        let node = RandomObjectCreator.create(randomNumberGenerator: { rawValueForBox })
+        XCTAssert(node.geometry is SCNBox)
+    }
 }

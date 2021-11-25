@@ -18,12 +18,19 @@ public class RandomObjectCreator {
         switch randomObject {
         case .sphere:
             return createSphere()
+        case .box:
+            return createBox()
         }
     }
     
     private static func createSphere() -> SCNNode {
         let sphere = SCNSphere(radius: 0.05)
         return createNode(geometry: sphere)
+    }
+    
+    private static func createBox() -> SCNNode {
+        let box = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
+        return createNode(geometry: box)
     }
     
     private static func createNode(geometry: SCNGeometry) -> SCNNode {
