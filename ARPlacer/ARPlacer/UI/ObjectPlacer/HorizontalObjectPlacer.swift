@@ -14,6 +14,9 @@ public class HorizontalObjectPlacer: ObjectPlacer {
         
         let node = RandomObjectCreator.create()
         node.position = raycastPositionOnARWorld(raycastResult: raycastResult)
+        
+        // to place node on surface of horizontal plane
+        movePivotToBottomOfNode(node: node)
         sceneView.scene.rootNode.addChildNode(node)
         return true
     }
@@ -29,5 +32,10 @@ public class HorizontalObjectPlacer: ObjectPlacer {
     private func raycastPositionOnARWorld(raycastResult: ARRaycastResult) -> SCNVector3 {
         let raycastPosition = raycastResult.worldTransform.columns.3
         return SCNVector3(raycastPosition.x, raycastPosition.y, raycastPosition.z)
+    }
+    
+    private func movePivotToBottomOfNode(node: SCNNode) {
+        let halfOfHeightOfNode = node.boundingBox.max.y
+        node.pivot = SCNMatrix4MakeTranslation(0, -halfOfHeightOfNode, 0)
     }
 }
