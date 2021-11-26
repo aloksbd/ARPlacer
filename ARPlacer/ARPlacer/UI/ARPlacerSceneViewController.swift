@@ -7,10 +7,6 @@
 
 import ARKit
 
-public protocol ObjectPlacer {
-    func place(in position: CGPoint) -> Bool
-}
-
 public class ARPlacerSceneViewController {
     private let sceneView: ARSCNView
     private let objectPlacer: ObjectPlacer

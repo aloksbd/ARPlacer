@@ -24,6 +24,7 @@
 		5CA925F0274F9DDE0026F0A7 /* ARPlacerSceneViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925EF274F9DDE0026F0A7 /* ARPlacerSceneViewControllerTests.swift */; };
 		5CA925F3274FA3010026F0A7 /* ARPlacerSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925F2274FA3010026F0A7 /* ARPlacerSceneViewController.swift */; };
 		5CA925F62750D9DA0026F0A7 /* ARSCNView+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925F52750D9D90026F0A7 /* ARSCNView+TestHelpers.swift */; };
+		5CA925F82751451E0026F0A7 /* ObjectPlacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925F72751451D0026F0A7 /* ObjectPlacer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		5CA925EF274F9DDE0026F0A7 /* ARPlacerSceneViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPlacerSceneViewControllerTests.swift; sourceTree = "<group>"; };
 		5CA925F2274FA3010026F0A7 /* ARPlacerSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPlacerSceneViewController.swift; sourceTree = "<group>"; };
 		5CA925F52750D9D90026F0A7 /* ARSCNView+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARSCNView+TestHelpers.swift"; sourceTree = "<group>"; };
+		5CA925F72751451D0026F0A7 /* ObjectPlacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectPlacer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 		5CA925F1274FA2EA0026F0A7 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				5CA925F9275145780026F0A7 /* ObjectPlacer */,
 				5CA925F2274FA3010026F0A7 /* ARPlacerSceneViewController.swift */,
 			);
 			path = UI;
@@ -171,6 +174,14 @@
 				5CA925F52750D9D90026F0A7 /* ARSCNView+TestHelpers.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		5CA925F9275145780026F0A7 /* ObjectPlacer */ = {
+			isa = PBXGroup;
+			children = (
+				5CA925F72751451D0026F0A7 /* ObjectPlacer.swift */,
+			);
+			path = ObjectPlacer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +288,7 @@
 				5CA925E0274E56C10026F0A7 /* InformationView.swift in Sources */,
 				5CA925E2274E5E0D0026F0A7 /* ErrorView.swift in Sources */,
 				5CA925F3274FA3010026F0A7 /* ARPlacerSceneViewController.swift in Sources */,
+				5CA925F82751451E0026F0A7 /* ObjectPlacer.swift in Sources */,
 				5CA925BA274E39D70026F0A7 /* ViewController.swift in Sources */,
 				5CA925DC274E51C80026F0A7 /* ARPlacerInformationPresenter.swift in Sources */,
 				5CA925E6274F2CD10026F0A7 /* RandomObjectCreator.swift in Sources */,
