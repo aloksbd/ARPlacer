@@ -8,12 +8,13 @@
 import ARKit
 
 public protocol ObjectPlacer {
-    func place(in position: CGPoint)
+    func place(in position: CGPoint) -> Bool
 }
 
 public class ARPlacerSceneViewController {
     private let sceneView: ARSCNView
     private let objectPlacer: ObjectPlacer
+    public var cannotPlaceAnchor: (() -> Void)?
     
     public init(sceneView: ARSCNView, objectPlacer: ObjectPlacer) {
         self.sceneView = sceneView
@@ -28,7 +29,10 @@ public class ARPlacerSceneViewController {
     
     @objc private func tap(_ gesture: UITapGestureRecognizer) {
         let tappedPosition = gesture.location(in: sceneView)
-        objectPlacer.place(in: tappedPosition)
+        guard objectPlacer.place(in: tappedPosition) else {
+            cannotPlaceAnchor?()
+            return
+        }
     }
     
     func runSession() {

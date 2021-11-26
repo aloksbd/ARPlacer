@@ -45,16 +45,33 @@ class ARPlacerSceneViewControllerTests: XCTestCase {
         XCTAssertEqual(objectPlacer?.callCount, 1)
     }
     
+    func test_notifiesIfObjectCouldNotBePlacedOnTap() {
+        let exp = expectation(description: "Wait for notification")
+        sut?.cannotPlaceAnchor = {
+            exp.fulfill()
+        }
+        sceneView?.simulateTap()
+        objectPlacer?.simulateFailToPlaceObject()
+        wait(for: [exp], timeout: 1)
+        XCTAssertEqual(objectPlacer?.callCount, 1)
+    }
+    
     //MARK: Helpers
     
     private class ObjectPlacerSpy: ObjectPlacer {
         private(set) var callCount = 0
+        private var placeObject = true
         
         var onPlaceCall: (() -> Void)?
         
-        func place(in position: CGPoint) {
+        func place(in position: CGPoint) -> Bool {
             callCount += 1
             onPlaceCall?()
+            return placeObject
+        }
+        
+        func simulateFailToPlaceObject() {
+            placeObject = false
         }
     }
 }
