@@ -64,7 +64,7 @@ class ARPlacerSceneViewControllerTests: XCTestCase {
         
         var onPlaceCall: (() -> Void)?
         
-        func place(in position: CGPoint) -> Bool {
+        func place(in sceneView: ARSCNView, at position: CGPoint) -> Bool {
             callCount += 1
             onPlaceCall?()
             return placeObject

@@ -25,7 +25,7 @@ public class ARPlacerSceneViewController {
     
     @objc private func tap(_ gesture: UITapGestureRecognizer) {
         let tappedPosition = gesture.location(in: sceneView)
-        guard objectPlacer.place(in: tappedPosition) else {
+        guard objectPlacer.place(in: sceneView, at: tappedPosition) else {
             cannotPlaceAnchor?()
             return
         }
