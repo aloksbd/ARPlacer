@@ -27,6 +27,7 @@
 		5CA925F82751451E0026F0A7 /* ObjectPlacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925F72751451D0026F0A7 /* ObjectPlacer.swift */; };
 		5CA925FD275151A30026F0A7 /* NonPlaneObjectPlacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925FC275151A30026F0A7 /* NonPlaneObjectPlacer.swift */; };
 		5CA925FF27515FCA0026F0A7 /* HorizontalObjectPlacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925FE27515FCA0026F0A7 /* HorizontalObjectPlacer.swift */; };
+		5CA92601275165D00026F0A7 /* VerticalObjectPlacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA92600275165D00026F0A7 /* VerticalObjectPlacer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		5CA925F72751451D0026F0A7 /* ObjectPlacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectPlacer.swift; sourceTree = "<group>"; };
 		5CA925FC275151A30026F0A7 /* NonPlaneObjectPlacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonPlaneObjectPlacer.swift; sourceTree = "<group>"; };
 		5CA925FE27515FCA0026F0A7 /* HorizontalObjectPlacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalObjectPlacer.swift; sourceTree = "<group>"; };
+		5CA92600275165D00026F0A7 /* VerticalObjectPlacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalObjectPlacer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 				5CA925F72751451D0026F0A7 /* ObjectPlacer.swift */,
 				5CA925FC275151A30026F0A7 /* NonPlaneObjectPlacer.swift */,
 				5CA925FE27515FCA0026F0A7 /* HorizontalObjectPlacer.swift */,
+				5CA92600275165D00026F0A7 /* VerticalObjectPlacer.swift */,
 			);
 			path = ObjectPlacer;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				5CA925FF27515FCA0026F0A7 /* HorizontalObjectPlacer.swift in Sources */,
 				5CA925E6274F2CD10026F0A7 /* RandomObjectCreator.swift in Sources */,
 				5CA925E9274F2F460026F0A7 /* RandomObject.swift in Sources */,
+				5CA92601275165D00026F0A7 /* VerticalObjectPlacer.swift in Sources */,
 				5CA925B6274E39D70026F0A7 /* AppDelegate.swift in Sources */,
 				5CA925D7274E4E280026F0A7 /* ARPlacerSessionDelegate.swift in Sources */,
 			);
