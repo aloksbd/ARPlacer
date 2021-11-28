@@ -21,6 +21,13 @@
 		5CA925E4274F274E0026F0A7 /* RandomObjectCreatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925E3274F274E0026F0A7 /* RandomObjectCreatorTests.swift */; };
 		5CA925E6274F2CD10026F0A7 /* RandomObjectCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925E5274F2CD10026F0A7 /* RandomObjectCreator.swift */; };
 		5CA925E9274F2F460026F0A7 /* RandomObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925E8274F2F460026F0A7 /* RandomObject.swift */; };
+		5CA925F0274F9DDE0026F0A7 /* ARPlacerSceneViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925EF274F9DDE0026F0A7 /* ARPlacerSceneViewControllerTests.swift */; };
+		5CA925F3274FA3010026F0A7 /* ARPlacerSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925F2274FA3010026F0A7 /* ARPlacerSceneViewController.swift */; };
+		5CA925F62750D9DA0026F0A7 /* ARSCNView+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925F52750D9D90026F0A7 /* ARSCNView+TestHelpers.swift */; };
+		5CA925F82751451E0026F0A7 /* ObjectPlacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925F72751451D0026F0A7 /* ObjectPlacer.swift */; };
+		5CA925FD275151A30026F0A7 /* NonPlaneObjectPlacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925FC275151A30026F0A7 /* NonPlaneObjectPlacer.swift */; };
+		5CA925FF27515FCA0026F0A7 /* HorizontalObjectPlacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925FE27515FCA0026F0A7 /* HorizontalObjectPlacer.swift */; };
+		5CA92601275165D00026F0A7 /* VerticalObjectPlacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA92600275165D00026F0A7 /* VerticalObjectPlacer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +57,13 @@
 		5CA925E3274F274E0026F0A7 /* RandomObjectCreatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomObjectCreatorTests.swift; sourceTree = "<group>"; };
 		5CA925E5274F2CD10026F0A7 /* RandomObjectCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomObjectCreator.swift; sourceTree = "<group>"; };
 		5CA925E8274F2F460026F0A7 /* RandomObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomObject.swift; sourceTree = "<group>"; };
+		5CA925EF274F9DDE0026F0A7 /* ARPlacerSceneViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPlacerSceneViewControllerTests.swift; sourceTree = "<group>"; };
+		5CA925F2274FA3010026F0A7 /* ARPlacerSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPlacerSceneViewController.swift; sourceTree = "<group>"; };
+		5CA925F52750D9D90026F0A7 /* ARSCNView+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARSCNView+TestHelpers.swift"; sourceTree = "<group>"; };
+		5CA925F72751451D0026F0A7 /* ObjectPlacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectPlacer.swift; sourceTree = "<group>"; };
+		5CA925FC275151A30026F0A7 /* NonPlaneObjectPlacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonPlaneObjectPlacer.swift; sourceTree = "<group>"; };
+		5CA925FE27515FCA0026F0A7 /* HorizontalObjectPlacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalObjectPlacer.swift; sourceTree = "<group>"; };
+		5CA92600275165D00026F0A7 /* VerticalObjectPlacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalObjectPlacer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +111,7 @@
 				5CA925BE274E39DA0026F0A7 /* Assets.xcassets */,
 				5CA925C0274E39DA0026F0A7 /* LaunchScreen.storyboard */,
 				5CA925D8274E4F950026F0A7 /* Core */,
+				5CA925F1274FA2EA0026F0A7 /* UI */,
 			);
 			path = ARPlacer;
 			sourceTree = "<group>";
@@ -104,9 +119,11 @@
 		5CA925CD274E469F0026F0A7 /* ARPlacerTests */ = {
 			isa = PBXGroup;
 			children = (
+				5CA925F42750D9B90026F0A7 /* Helpers */,
 				5CA925CE274E469F0026F0A7 /* ARPlacerTests.swift */,
 				5CA925D9274E51590026F0A7 /* ARPlacerInformationPresenterTests.swift */,
 				5CA925E3274F274E0026F0A7 /* RandomObjectCreatorTests.swift */,
+				5CA925EF274F9DDE0026F0A7 /* ARPlacerSceneViewControllerTests.swift */,
 			);
 			path = ARPlacerTests;
 			sourceTree = "<group>";
@@ -146,6 +163,34 @@
 				5CA925E8274F2F460026F0A7 /* RandomObject.swift */,
 			);
 			path = RandomObjectCreator;
+			sourceTree = "<group>";
+		};
+		5CA925F1274FA2EA0026F0A7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				5CA925F9275145780026F0A7 /* ObjectPlacer */,
+				5CA925F2274FA3010026F0A7 /* ARPlacerSceneViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		5CA925F42750D9B90026F0A7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5CA925F52750D9D90026F0A7 /* ARSCNView+TestHelpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		5CA925F9275145780026F0A7 /* ObjectPlacer */ = {
+			isa = PBXGroup;
+			children = (
+				5CA925F72751451D0026F0A7 /* ObjectPlacer.swift */,
+				5CA925FC275151A30026F0A7 /* NonPlaneObjectPlacer.swift */,
+				5CA925FE27515FCA0026F0A7 /* HorizontalObjectPlacer.swift */,
+				5CA92600275165D00026F0A7 /* VerticalObjectPlacer.swift */,
+			);
+			path = ObjectPlacer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,10 +296,15 @@
 			files = (
 				5CA925E0274E56C10026F0A7 /* InformationView.swift in Sources */,
 				5CA925E2274E5E0D0026F0A7 /* ErrorView.swift in Sources */,
+				5CA925F3274FA3010026F0A7 /* ARPlacerSceneViewController.swift in Sources */,
+				5CA925F82751451E0026F0A7 /* ObjectPlacer.swift in Sources */,
+				5CA925FD275151A30026F0A7 /* NonPlaneObjectPlacer.swift in Sources */,
 				5CA925BA274E39D70026F0A7 /* ViewController.swift in Sources */,
 				5CA925DC274E51C80026F0A7 /* ARPlacerInformationPresenter.swift in Sources */,
+				5CA925FF27515FCA0026F0A7 /* HorizontalObjectPlacer.swift in Sources */,
 				5CA925E6274F2CD10026F0A7 /* RandomObjectCreator.swift in Sources */,
 				5CA925E9274F2F460026F0A7 /* RandomObject.swift in Sources */,
+				5CA92601275165D00026F0A7 /* VerticalObjectPlacer.swift in Sources */,
 				5CA925B6274E39D70026F0A7 /* AppDelegate.swift in Sources */,
 				5CA925D7274E4E280026F0A7 /* ARPlacerSessionDelegate.swift in Sources */,
 			);
@@ -265,6 +315,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CA925CF274E469F0026F0A7 /* ARPlacerTests.swift in Sources */,
+				5CA925F62750D9DA0026F0A7 /* ARSCNView+TestHelpers.swift in Sources */,
+				5CA925F0274F9DDE0026F0A7 /* ARPlacerSceneViewControllerTests.swift in Sources */,
 				5CA925DA274E51590026F0A7 /* ARPlacerInformationPresenterTests.swift in Sources */,
 				5CA925E4274F274E0026F0A7 /* RandomObjectCreatorTests.swift in Sources */,
 			);
