@@ -31,6 +31,7 @@
 		5CA92604275227ED0026F0A7 /* ARPlacerViewControllerSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA92603275227ED0026F0A7 /* ARPlacerViewControllerSnapshotTests.swift */; };
 		5CA9260727522E030026F0A7 /* XCTestCase+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA9260627522E030026F0A7 /* XCTestCase+Snapshot.swift */; };
 		5CA9260927522E640026F0A7 /* UIViewController+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA9260827522E640026F0A7 /* UIViewController+Snapshot.swift */; };
+		5CA9260B2753A3F80026F0A7 /* ARPlacerViewControllerIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA9260A2753A3F80026F0A7 /* ARPlacerViewControllerIntegrationTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		5CA92603275227ED0026F0A7 /* ARPlacerViewControllerSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPlacerViewControllerSnapshotTests.swift; sourceTree = "<group>"; };
 		5CA9260627522E030026F0A7 /* XCTestCase+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Snapshot.swift"; sourceTree = "<group>"; };
 		5CA9260827522E640026F0A7 /* UIViewController+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Snapshot.swift"; sourceTree = "<group>"; };
+		5CA9260A2753A3F80026F0A7 /* ARPlacerViewControllerIntegrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPlacerViewControllerIntegrationTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				5CA925D9274E51590026F0A7 /* ARPlacerInformationPresenterTests.swift */,
 				5CA925E3274F274E0026F0A7 /* RandomObjectCreatorTests.swift */,
 				5CA925EF274F9DDE0026F0A7 /* ARPlacerSceneViewControllerTests.swift */,
+				5CA9260A2753A3F80026F0A7 /* ARPlacerViewControllerIntegrationTest.swift */,
 			);
 			path = ARPlacerTests;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				5CA9260927522E640026F0A7 /* UIViewController+Snapshot.swift in Sources */,
 				5CA925F62750D9DA0026F0A7 /* ARSCNView+TestHelpers.swift in Sources */,
 				5CA925F0274F9DDE0026F0A7 /* ARPlacerSceneViewControllerTests.swift in Sources */,
+				5CA9260B2753A3F80026F0A7 /* ARPlacerViewControllerIntegrationTest.swift in Sources */,
 				5CA925DA274E51590026F0A7 /* ARPlacerInformationPresenterTests.swift in Sources */,
 				5CA92604275227ED0026F0A7 /* ARPlacerViewControllerSnapshotTests.swift in Sources */,
 				5CA925E4274F274E0026F0A7 /* RandomObjectCreatorTests.swift in Sources */,

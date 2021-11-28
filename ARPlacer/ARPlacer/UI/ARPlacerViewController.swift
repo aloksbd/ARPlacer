@@ -18,7 +18,6 @@ public class ARPlacerViewController: UIViewController, ARSCNViewDelegate {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     public override func viewWillAppear(_ animated: Bool) {
