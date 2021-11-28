@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5CA925B6274E39D70026F0A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925B5274E39D70026F0A7 /* AppDelegate.swift */; };
-		5CA925BA274E39D70026F0A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925B9274E39D70026F0A7 /* ViewController.swift */; };
-		5CA925BD274E39D70026F0A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CA925BB274E39D70026F0A7 /* Main.storyboard */; };
+		5CA925BA274E39D70026F0A7 /* ARPlacerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925B9274E39D70026F0A7 /* ARPlacerViewController.swift */; };
+		5CA925BD274E39D70026F0A7 /* ARPlacer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CA925BB274E39D70026F0A7 /* ARPlacer.storyboard */; };
 		5CA925BF274E39DA0026F0A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CA925BE274E39DA0026F0A7 /* Assets.xcassets */; };
 		5CA925C2274E39DA0026F0A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CA925C0274E39DA0026F0A7 /* LaunchScreen.storyboard */; };
 		5CA925CF274E469F0026F0A7 /* ARPlacerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925CE274E469F0026F0A7 /* ARPlacerTests.swift */; };
@@ -28,6 +28,9 @@
 		5CA925FD275151A30026F0A7 /* NonPlaneObjectPlacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925FC275151A30026F0A7 /* NonPlaneObjectPlacer.swift */; };
 		5CA925FF27515FCA0026F0A7 /* HorizontalObjectPlacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925FE27515FCA0026F0A7 /* HorizontalObjectPlacer.swift */; };
 		5CA92601275165D00026F0A7 /* VerticalObjectPlacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA92600275165D00026F0A7 /* VerticalObjectPlacer.swift */; };
+		5CA92604275227ED0026F0A7 /* ARPlacerViewControllerSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA92603275227ED0026F0A7 /* ARPlacerViewControllerSnapshotTests.swift */; };
+		5CA9260727522E030026F0A7 /* XCTestCase+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA9260627522E030026F0A7 /* XCTestCase+Snapshot.swift */; };
+		5CA9260927522E640026F0A7 /* UIViewController+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA9260827522E640026F0A7 /* UIViewController+Snapshot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +46,8 @@
 /* Begin PBXFileReference section */
 		5CA925B2274E39D70026F0A7 /* ARPlacer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARPlacer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CA925B5274E39D70026F0A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5CA925B9274E39D70026F0A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5CA925BC274E39D70026F0A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5CA925B9274E39D70026F0A7 /* ARPlacerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPlacerViewController.swift; sourceTree = "<group>"; };
+		5CA925BC274E39D70026F0A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ARPlacer.storyboard; sourceTree = "<group>"; };
 		5CA925BE274E39DA0026F0A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CA925C1274E39DA0026F0A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5CA925CC274E469F0026F0A7 /* ARPlacerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARPlacerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +67,9 @@
 		5CA925FC275151A30026F0A7 /* NonPlaneObjectPlacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonPlaneObjectPlacer.swift; sourceTree = "<group>"; };
 		5CA925FE27515FCA0026F0A7 /* HorizontalObjectPlacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalObjectPlacer.swift; sourceTree = "<group>"; };
 		5CA92600275165D00026F0A7 /* VerticalObjectPlacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalObjectPlacer.swift; sourceTree = "<group>"; };
+		5CA92603275227ED0026F0A7 /* ARPlacerViewControllerSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPlacerViewControllerSnapshotTests.swift; sourceTree = "<group>"; };
+		5CA9260627522E030026F0A7 /* XCTestCase+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Snapshot.swift"; sourceTree = "<group>"; };
+		5CA9260827522E640026F0A7 /* UIViewController+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Snapshot.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				5CA925B5274E39D70026F0A7 /* AppDelegate.swift */,
-				5CA925B9274E39D70026F0A7 /* ViewController.swift */,
-				5CA925BB274E39D70026F0A7 /* Main.storyboard */,
 				5CA925BE274E39DA0026F0A7 /* Assets.xcassets */,
 				5CA925C0274E39DA0026F0A7 /* LaunchScreen.storyboard */,
 				5CA925D8274E4F950026F0A7 /* Core */,
@@ -119,6 +123,7 @@
 		5CA925CD274E469F0026F0A7 /* ARPlacerTests */ = {
 			isa = PBXGroup;
 			children = (
+				5CA92602275227C70026F0A7 /* SnapShotTests */,
 				5CA925F42750D9B90026F0A7 /* Helpers */,
 				5CA925CE274E469F0026F0A7 /* ARPlacerTests.swift */,
 				5CA925D9274E51590026F0A7 /* ARPlacerInformationPresenterTests.swift */,
@@ -170,6 +175,8 @@
 			children = (
 				5CA925F9275145780026F0A7 /* ObjectPlacer */,
 				5CA925F2274FA3010026F0A7 /* ARPlacerSceneViewController.swift */,
+				5CA925B9274E39D70026F0A7 /* ARPlacerViewController.swift */,
+				5CA925BB274E39D70026F0A7 /* ARPlacer.storyboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -191,6 +198,24 @@
 				5CA92600275165D00026F0A7 /* VerticalObjectPlacer.swift */,
 			);
 			path = ObjectPlacer;
+			sourceTree = "<group>";
+		};
+		5CA92602275227C70026F0A7 /* SnapShotTests */ = {
+			isa = PBXGroup;
+			children = (
+				5CA9260527522DCF0026F0A7 /* Helpers */,
+				5CA92603275227ED0026F0A7 /* ARPlacerViewControllerSnapshotTests.swift */,
+			);
+			path = SnapShotTests;
+			sourceTree = "<group>";
+		};
+		5CA9260527522DCF0026F0A7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5CA9260627522E030026F0A7 /* XCTestCase+Snapshot.swift */,
+				5CA9260827522E640026F0A7 /* UIViewController+Snapshot.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,7 +301,7 @@
 			files = (
 				5CA925C2274E39DA0026F0A7 /* LaunchScreen.storyboard in Resources */,
 				5CA925BF274E39DA0026F0A7 /* Assets.xcassets in Resources */,
-				5CA925BD274E39D70026F0A7 /* Main.storyboard in Resources */,
+				5CA925BD274E39D70026F0A7 /* ARPlacer.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,7 +324,7 @@
 				5CA925F3274FA3010026F0A7 /* ARPlacerSceneViewController.swift in Sources */,
 				5CA925F82751451E0026F0A7 /* ObjectPlacer.swift in Sources */,
 				5CA925FD275151A30026F0A7 /* NonPlaneObjectPlacer.swift in Sources */,
-				5CA925BA274E39D70026F0A7 /* ViewController.swift in Sources */,
+				5CA925BA274E39D70026F0A7 /* ARPlacerViewController.swift in Sources */,
 				5CA925DC274E51C80026F0A7 /* ARPlacerInformationPresenter.swift in Sources */,
 				5CA925FF27515FCA0026F0A7 /* HorizontalObjectPlacer.swift in Sources */,
 				5CA925E6274F2CD10026F0A7 /* RandomObjectCreator.swift in Sources */,
@@ -315,9 +340,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CA925CF274E469F0026F0A7 /* ARPlacerTests.swift in Sources */,
+				5CA9260727522E030026F0A7 /* XCTestCase+Snapshot.swift in Sources */,
+				5CA9260927522E640026F0A7 /* UIViewController+Snapshot.swift in Sources */,
 				5CA925F62750D9DA0026F0A7 /* ARSCNView+TestHelpers.swift in Sources */,
 				5CA925F0274F9DDE0026F0A7 /* ARPlacerSceneViewControllerTests.swift in Sources */,
 				5CA925DA274E51590026F0A7 /* ARPlacerInformationPresenterTests.swift in Sources */,
+				5CA92604275227ED0026F0A7 /* ARPlacerViewControllerSnapshotTests.swift in Sources */,
 				5CA925E4274F274E0026F0A7 /* RandomObjectCreatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,12 +361,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5CA925BB274E39D70026F0A7 /* Main.storyboard */ = {
+		5CA925BB274E39D70026F0A7 /* ARPlacer.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				5CA925BC274E39D70026F0A7 /* Base */,
 			);
-			name = Main.storyboard;
+			name = ARPlacer.storyboard;
 			sourceTree = "<group>";
 		};
 		5CA925C0274E39DA0026F0A7 /* LaunchScreen.storyboard */ = {
@@ -480,7 +508,7 @@
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = ARPlacer;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -510,7 +538,7 @@
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = ARPlacer;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
