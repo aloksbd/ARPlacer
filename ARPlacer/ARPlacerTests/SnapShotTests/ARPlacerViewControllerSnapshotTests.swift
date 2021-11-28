@@ -27,6 +27,24 @@ class FeedSnapshotTests: XCTestCase {
         assert(snapshot: sut.snapshot(for: .iPhone8(style: .dark)), named: "ERROR_dark")
     }
     
+    func test_errorAfterInformation() {
+        let sut = makeSUT()
+        
+        sut.display(information: "This is a\nmultiline\ninformation.")
+        sut.display(error: "This is a\nmultiline\nerror.")
+
+        assert(snapshot: sut.snapshot(for: .iPhone8(style: .light)), named: "ERROR_AFTER_INFORMATION_light")
+    }
+    
+    func test_informationAfterError() {
+        let sut = makeSUT()
+        
+        sut.display(error: "This is a\nmultiline\nerror.")
+        sut.display(information: "This is a\nmultiline\ninformation.")
+
+        assert(snapshot: sut.snapshot(for: .iPhone8(style: .light)), named: "INFORMATION_AFTER_ERROR_light")
+    }
+    
     // MARK: Helpers
     
     private func makeSUT() -> ARPlacerViewController {

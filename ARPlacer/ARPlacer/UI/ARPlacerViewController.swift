@@ -37,6 +37,7 @@ extension ARPlacerViewController: InformationView, ErrorView {
     }
     
     public func display(information: String) {
+        textLabel.textColor = .systemBackground
         textLabel.text = information
     }
 }
