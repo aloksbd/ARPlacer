@@ -8,6 +8,8 @@
 import ARKit
 
 public class VerticalObjectPlacer: ObjectPlacer {
+    public init() { }
+    
     public func place(in sceneView: ARSCNView, at position: CGPoint) -> Bool {
         guard let raycastQuery = raycastQuery(on: sceneView, from: position) else { return false }
         guard let raycastResult = firstRaycastQueryResult(from: raycastQuery, on: sceneView) else { return false }
