@@ -30,7 +30,12 @@ public class ARPlacerViewController: UIViewController, ARSCNViewDelegate {
     }
 }
 
-extension ARPlacerViewController: InformationView {
+extension ARPlacerViewController: InformationView, ErrorView {
+    public func display(error: String) {
+        textLabel.textColor = .systemRed
+        textLabel.text = error
+    }
+    
     public func display(information: String) {
         textLabel.text = information
     }
