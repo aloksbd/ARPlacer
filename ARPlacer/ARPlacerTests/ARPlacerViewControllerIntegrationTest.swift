@@ -10,6 +10,17 @@ import ARPlacer
 import ARKit
 
 class ARPlacerViewControllerIntegrationTest: XCTestCase {
+    func test_sceneViewIsSetOnViewDidLoad() {
+        let sceneView = ARSCNView()
+        let sut = makeSUT(with: sceneView)
+        
+        XCTAssertNotEqual(sut.sceneView, sceneView)
+        
+        sut.loadViewIfNeeded()
+        
+        XCTAssertEqual(sut.sceneView, sceneView)
+    }
+    
     func test_textLabelIsHiddenOnViewDidLoad() {
         let sut = makeSUT()
         
@@ -20,10 +31,14 @@ class ARPlacerViewControllerIntegrationTest: XCTestCase {
     
     // MARK: Helpers
     
-    private func makeSUT() -> ARPlacerViewController {
-        let bundle = Bundle(for: ARPlacerViewController.self)
-        let storyboard = UIStoryboard(name: "ARPlacer", bundle: bundle)
-        let controller = storyboard.instantiateInitialViewController() as! ARPlacerViewController
+    private func makeSUT(with sceneView: ARSCNView = ARSCNView()) -> ARPlacerViewController {
+        let controller = ARPlacerViewControllerComposer.composeWith(objectPlacer: ObjectPlacerSpy(), sceneView: sceneView)
         return controller
+    }
+    
+    private class ObjectPlacerSpy: ObjectPlacer {
+        func place(in sceneView: ARSCNView, at position: CGPoint) -> Bool {
+            return true
+        }
     }
 }

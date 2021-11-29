@@ -6,18 +6,20 @@
 //
 
 import UIKit
-import SceneKit
-import ARKit
 
-public class ARPlacerViewController: UIViewController, ARSCNViewDelegate {
+public class ARPlacerViewController: UIViewController {
 
-    @IBOutlet private(set) public var sceneView: ARSCNView!
+    @IBOutlet private(set) public var sceneView: UIView!
     @IBOutlet private(set) public weak var textLabel: UILabel!
     
-    var sceneViewController: ARPlacerSceneViewController!
+    // setting sceneView this way to keep using storyboard and inject sceneview
+    public var setSceneView: ((inout UIView) -> Void)?
+    
+    public var sceneViewController: ARPlacerSceneViewController!
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        setSceneView?(&sceneView)
     }
     
     public override func viewWillAppear(_ animated: Bool) {

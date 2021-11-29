@@ -6,11 +6,15 @@
 //
 
 import UIKit
+import ARKit
 
 public class ARPlacerViewControllerComposer {
-    public static func composeWith(objectPlacer: ObjectPlacer) -> ARPlacerViewController {
+    public static func composeWith(objectPlacer: ObjectPlacer, sceneView: ARSCNView) -> ARPlacerViewController {
         let controller = ARPlacerViewControllerFromStoryBoard()
-        let arPlacerSceneViewController = ARPlacerSceneViewController(sceneView: controller.sceneView, objectPlacer: objectPlacer)
+        controller.setSceneView = { view in
+            view = sceneView
+        }
+        let arPlacerSceneViewController = ARPlacerSceneViewController(sceneView: sceneView, objectPlacer: objectPlacer)
         controller.sceneViewController = arPlacerSceneViewController
         return controller
     }

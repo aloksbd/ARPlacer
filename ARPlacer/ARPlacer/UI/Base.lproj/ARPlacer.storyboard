@@ -16,9 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrB-h1-WRS">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
-                            </arscnView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8qU-WA-peR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </view>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2H-jw-Aga">
                                 <rect key="frame" x="20" y="818" width="374" height="24"/>
                                 <color key="backgroundColor" systemColor="secondaryLabelColor"/>
@@ -30,17 +30,17 @@
                         <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="8qU-WA-peR" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="2Lo-uH-anQ"/>
                             <constraint firstItem="fQZ-KI-GVf" firstAttribute="trailing" secondItem="m2H-jw-Aga" secondAttribute="trailing" constant="20" id="90d-w4-cNn"/>
-                            <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="GsS-dJ-CKf"/>
                             <constraint firstItem="m2H-jw-Aga" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" constant="20" id="Jg4-x8-sE9"/>
-                            <constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="VpT-BR-CcM"/>
-                            <constraint firstItem="BrB-h1-WRS" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="XyZ-9z-H8e"/>
-                            <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="rJc-2c-zQA"/>
+                            <constraint firstItem="8qU-WA-peR" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="gOW-f2-dad"/>
+                            <constraint firstItem="8qU-WA-peR" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="ghc-mY-dJN"/>
+                            <constraint firstAttribute="bottom" secondItem="8qU-WA-peR" secondAttribute="bottom" id="o2c-o9-RG8"/>
                             <constraint firstItem="m2H-jw-Aga" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" constant="-20" id="uCo-eo-e6l"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
+                        <outlet property="sceneView" destination="8qU-WA-peR" id="4qZ-nY-1RH"/>
                         <outlet property="textLabel" destination="m2H-jw-Aga" id="dge-kF-Clb"/>
                     </connections>
                 </viewController>
