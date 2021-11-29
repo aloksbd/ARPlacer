@@ -31,11 +31,13 @@ public class ARPlacerViewController: UIViewController, ARSCNViewDelegate {
 
 extension ARPlacerViewController: InformationView, ErrorView {
     public func display(error: String) {
+        textLabel.isHidden = false
         textLabel.textColor = .systemRed
         textLabel.text = error
     }
     
     public func display(information: String) {
+        textLabel.isHidden = false
         textLabel.textColor = .systemBackground
         textLabel.text = information
     }
