@@ -6,16 +6,24 @@
 //
 
 import UIKit
+import ARKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let objectPlacer = NonPlaneObjectPlacer()
+        let sceneView = ARSCNView()
+        let viewController = ARPlacerViewControllerComposer.composeWith(objectPlacer: objectPlacer, sceneView: sceneView)
+        self.window?.rootViewController = viewController
+        self.window?.makeKeyAndVisible()
+        
         return true
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

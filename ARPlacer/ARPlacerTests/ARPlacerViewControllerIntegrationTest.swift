@@ -29,6 +29,16 @@ class ARPlacerViewControllerIntegrationTest: XCTestCase {
         XCTAssertTrue(sut.textLabel.isHidden)
     }
     
+    func test_textLabelDisplaysScanningInfoOnViewWillAppear() {
+        let sceneView = ARSCNView()
+        let sut = makeSUT(with: sceneView)
+        
+        sut.loadViewIfNeeded()
+        sut.viewWillAppear(false)
+        
+        XCTAssertFalse(sut.textLabel.isHidden)
+    }
+    
     // MARK: Helpers
     
     private func makeSUT(with sceneView: ARSCNView = ARSCNView()) -> ARPlacerViewController {

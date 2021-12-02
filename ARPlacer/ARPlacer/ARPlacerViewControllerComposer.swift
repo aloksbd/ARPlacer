@@ -9,11 +9,24 @@ import UIKit
 import ARKit
 
 public class ARPlacerViewControllerComposer {
-    public static func composeWith(objectPlacer: ObjectPlacer, sceneView: ARSCNView) -> ARPlacerViewController {
+    public static func composeWith(objectPlacer: ObjectPlacer, sceneView: ARSCNView = ARSCNView()) -> ARPlacerViewController {
         let controller = ARPlacerViewControllerFromStoryBoard()
+        
+        let delegate = ARPlacerSessionDelegateWithPresenterAdapter(delegate: ARPlacerSessionDelegate(), presenter: ARPlacerInformationPresenter(informationView: controller, errorView: controller))
+        
+        sceneView.delegate = delegate
         controller.setSceneView = { view in
-            view = sceneView
+            let v = sceneView
+            v.translatesAutoresizingMaskIntoConstraints = false
+            view.addSubview(v)
+            NSLayoutConstraint.activate([
+                v.topAnchor.constraint(equalTo: view.topAnchor),
+                v.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                v.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                v.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            ])
         }
+        
         let arPlacerSceneViewController = ARPlacerSceneViewController(sceneView: sceneView, objectPlacer: objectPlacer)
         controller.sceneViewController = arPlacerSceneViewController
         return controller

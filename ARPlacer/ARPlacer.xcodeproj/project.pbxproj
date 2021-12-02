@@ -33,6 +33,7 @@
 		5CA9260927522E640026F0A7 /* UIViewController+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA9260827522E640026F0A7 /* UIViewController+Snapshot.swift */; };
 		5CA9260B2753A3F80026F0A7 /* ARPlacerViewControllerIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA9260A2753A3F80026F0A7 /* ARPlacerViewControllerIntegrationTest.swift */; };
 		5CA9260D2753E6290026F0A7 /* ARPlacerViewControllerComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA9260C2753E6280026F0A7 /* ARPlacerViewControllerComposer.swift */; };
+		5CAA4CCE275685CA008BC4DB /* ARPlacerSessionDelegateWithPresenterAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAA4CCD275685CA008BC4DB /* ARPlacerSessionDelegateWithPresenterAdapter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		5CA9260827522E640026F0A7 /* UIViewController+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Snapshot.swift"; sourceTree = "<group>"; };
 		5CA9260A2753A3F80026F0A7 /* ARPlacerViewControllerIntegrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPlacerViewControllerIntegrationTest.swift; sourceTree = "<group>"; };
 		5CA9260C2753E6280026F0A7 /* ARPlacerViewControllerComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPlacerViewControllerComposer.swift; sourceTree = "<group>"; };
+		5CAA4CCD275685CA008BC4DB /* ARPlacerSessionDelegateWithPresenterAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPlacerSessionDelegateWithPresenterAdapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			children = (
 				5CA925B5274E39D70026F0A7 /* AppDelegate.swift */,
 				5CA9260C2753E6280026F0A7 /* ARPlacerViewControllerComposer.swift */,
+				5CAA4CCD275685CA008BC4DB /* ARPlacerSessionDelegateWithPresenterAdapter.swift */,
 				5CA925BE274E39DA0026F0A7 /* Assets.xcassets */,
 				5CA925C0274E39DA0026F0A7 /* LaunchScreen.storyboard */,
 				5CA925D8274E4F950026F0A7 /* Core */,
@@ -326,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CA925E0274E56C10026F0A7 /* InformationView.swift in Sources */,
+				5CAA4CCE275685CA008BC4DB /* ARPlacerSessionDelegateWithPresenterAdapter.swift in Sources */,
 				5CA925E2274E5E0D0026F0A7 /* ErrorView.swift in Sources */,
 				5CA925F3274FA3010026F0A7 /* ARPlacerSceneViewController.swift in Sources */,
 				5CA925F82751451E0026F0A7 /* ObjectPlacer.swift in Sources */,
@@ -513,7 +517,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 95T69XHSY5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Use the camera for AR experience";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
@@ -542,7 +546,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 95T69XHSY5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Use the camera for AR experience";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;

@@ -7,7 +7,7 @@
 
 import ARKit
 
-public class ARPlacerSessionDelegate: NSObject, ARSessionDelegate {
+public class ARPlacerSessionDelegate: NSObject, ARSCNViewDelegate {
     public var sessionFailedWithError: ((String) -> Void)?
     public var onLimited: (() -> Void)?
     public var onNotAvailable: (() -> Void)?

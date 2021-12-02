@@ -24,14 +24,25 @@ public class ARPlacerViewController: UIViewController {
     
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        sceneViewController.runSession()
     }
     
     public override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        sceneViewController.pauseSession()
     }
 }
 
 extension ARPlacerViewController: InformationView, ErrorView {
+    public func displayAndHide(information: String) {
+        textLabel.isHidden = false
+        textLabel.textColor = .systemBackground
+        textLabel.text = information
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            self.textLabel.isHidden = true
+        }
+    }
+    
     public func display(error: String) {
         textLabel.isHidden = false
         textLabel.textColor = .systemRed

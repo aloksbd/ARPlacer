@@ -9,12 +9,14 @@ import ARKit
 
 public class ARPlacerSceneViewController {
     private let sceneView: ARSCNView
+    private var delegate: ARSCNViewDelegate?
     private let objectPlacer: ObjectPlacer
     public var cannotPlaceAnchor: (() -> Void)?
     
     public init(sceneView: ARSCNView, objectPlacer: ObjectPlacer) {
         self.sceneView = sceneView
         self.objectPlacer = objectPlacer
+        self.delegate = sceneView.delegate
         addTapGestureRecognizer()
     }
     
