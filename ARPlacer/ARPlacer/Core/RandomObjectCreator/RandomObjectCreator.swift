@@ -45,8 +45,8 @@ public class RandomObjectCreator {
         return createNode(geometry: torus)
     }
     
-    private static func createNode(geometry: SCNGeometry) -> SCNNode {
-        return SCNNode(geometry: geometry)
+    private static func createNode(geometry: SCNGeometry) -> Object {
+        return Object(geometry: geometry)
     }
     
     private static func giveRandomColor(geometry: SCNGeometry) {

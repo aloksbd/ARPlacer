@@ -34,6 +34,8 @@
 		5CA9260B2753A3F80026F0A7 /* ARPlacerViewControllerIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA9260A2753A3F80026F0A7 /* ARPlacerViewControllerIntegrationTest.swift */; };
 		5CA9260D2753E6290026F0A7 /* ARPlacerViewControllerComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA9260C2753E6280026F0A7 /* ARPlacerViewControllerComposer.swift */; };
 		5CAA4CCE275685CA008BC4DB /* ARPlacerSessionDelegateWithPresenterAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAA4CCD275685CA008BC4DB /* ARPlacerSessionDelegateWithPresenterAdapter.swift */; };
+		5CAA4CD2275A0034008BC4DB /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAA4CD1275A0034008BC4DB /* Object.swift */; };
+		5CB26C7C276733CB00A8B54A /* ObjectDistanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB26C7B276733CB00A8B54A /* ObjectDistanceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		5CA9260A2753A3F80026F0A7 /* ARPlacerViewControllerIntegrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPlacerViewControllerIntegrationTest.swift; sourceTree = "<group>"; };
 		5CA9260C2753E6280026F0A7 /* ARPlacerViewControllerComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPlacerViewControllerComposer.swift; sourceTree = "<group>"; };
 		5CAA4CCD275685CA008BC4DB /* ARPlacerSessionDelegateWithPresenterAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPlacerSessionDelegateWithPresenterAdapter.swift; sourceTree = "<group>"; };
+		5CAA4CD1275A0034008BC4DB /* Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
+		5CB26C7B276733CB00A8B54A /* ObjectDistanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDistanceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +152,7 @@
 				5CA925D6274E4E280026F0A7 /* ARPlacerSessionDelegate.swift */,
 				5CA925DD274E54220026F0A7 /* Presentation */,
 				5CA925E7274F2F1F0026F0A7 /* RandomObjectCreator */,
+				5CAA4CD1275A0034008BC4DB /* Object.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 				5CA925F2274FA3010026F0A7 /* ARPlacerSceneViewController.swift */,
 				5CA925B9274E39D70026F0A7 /* ARPlacerViewController.swift */,
 				5CA925BB274E39D70026F0A7 /* ARPlacer.storyboard */,
+				5CB26C7B276733CB00A8B54A /* ObjectDistanceController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -336,12 +342,14 @@
 				5CA925FD275151A30026F0A7 /* NonPlaneObjectPlacer.swift in Sources */,
 				5CA925BA274E39D70026F0A7 /* ARPlacerViewController.swift in Sources */,
 				5CA925DC274E51C80026F0A7 /* ARPlacerInformationPresenter.swift in Sources */,
+				5CB26C7C276733CB00A8B54A /* ObjectDistanceController.swift in Sources */,
 				5CA925FF27515FCA0026F0A7 /* HorizontalObjectPlacer.swift in Sources */,
 				5CA9260D2753E6290026F0A7 /* ARPlacerViewControllerComposer.swift in Sources */,
 				5CA925E6274F2CD10026F0A7 /* RandomObjectCreator.swift in Sources */,
 				5CA925E9274F2F460026F0A7 /* RandomObject.swift in Sources */,
 				5CA92601275165D00026F0A7 /* VerticalObjectPlacer.swift in Sources */,
 				5CA925B6274E39D70026F0A7 /* AppDelegate.swift in Sources */,
+				5CAA4CD2275A0034008BC4DB /* Object.swift in Sources */,
 				5CA925D7274E4E280026F0A7 /* ARPlacerSessionDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
