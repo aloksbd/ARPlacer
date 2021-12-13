@@ -7,6 +7,7 @@
 
 import XCTest
 import ARPlacer
+import ARKit
 
 class FeedSnapshotTests: XCTestCase {
     func test_information() {
@@ -48,10 +49,15 @@ class FeedSnapshotTests: XCTestCase {
     // MARK: Helpers
     
     private func makeSUT() -> ARPlacerViewController {
-        let bundle = Bundle(for: ARPlacerViewController.self)
-        let storyboard = UIStoryboard(name: "ARPlacer", bundle: bundle)
-        let controller = storyboard.instantiateInitialViewController() as! ARPlacerViewController
+        let objectPlacer = ObjectPlacerSpy()
+        let controller = ARPlacerViewControllerComposer.composeWith(objectPlacer: objectPlacer)
         controller.loadViewIfNeeded()
         return controller
+    }
+    
+    private class ObjectPlacerSpy: ObjectPlacer {
+        func place(in sceneView: ARSCNView, at position: CGPoint) -> Bool {
+            return true
+        }
     }
 }

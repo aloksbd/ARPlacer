@@ -9,16 +9,17 @@ import XCTest
 import ARPlacer
 import ARKit
 
+// How to test informations being displayed????
+// When session starts and camera tracking changes
+
 class ARPlacerViewControllerIntegrationTest: XCTestCase {
     func test_sceneViewIsSetOnViewDidLoad() {
         let sceneView = ARSCNView()
         let sut = makeSUT(with: sceneView)
         
-        XCTAssertNotEqual(sut.sceneView, sceneView)
-        
         sut.loadViewIfNeeded()
         
-        XCTAssertEqual(sut.sceneView, sceneView)
+        XCTAssertEqual(sut.sceneView.subviews.first, sceneView)
     }
     
     func test_textLabelIsHiddenOnViewDidLoad() {
@@ -27,16 +28,6 @@ class ARPlacerViewControllerIntegrationTest: XCTestCase {
         sut.loadViewIfNeeded()
         
         XCTAssertTrue(sut.textLabel.isHidden)
-    }
-    
-    func test_textLabelDisplaysScanningInfoOnViewWillAppear() {
-        let sceneView = ARSCNView()
-        let sut = makeSUT(with: sceneView)
-        
-        sut.loadViewIfNeeded()
-        sut.viewWillAppear(false)
-        
-        XCTAssertFalse(sut.textLabel.isHidden)
     }
     
     // MARK: Helpers
