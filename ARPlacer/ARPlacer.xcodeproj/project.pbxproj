@@ -359,6 +359,7 @@
 				5CB26C7E27674FEB00A8B54A /* ObjectPlacerWithFallbackDecorator.swift in Sources */,
 				5CAA4CD2275A0034008BC4DB /* Object.swift in Sources */,
 				5CA925D7274E4E280026F0A7 /* ARPlacerSessionDelegate.swift in Sources */,
+				5CB26C80276750F300A8B54A /* ARPlacerSessionDelegateWithObjetDistanceControllerAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
