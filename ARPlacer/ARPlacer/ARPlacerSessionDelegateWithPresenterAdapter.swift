@@ -7,7 +7,7 @@
 
 import ARKit
 
-public class ARPlacerSessionDelegateWithPresenterAdapter: NSObject, ARSCNViewDelegate {
+public class ARPlacerSessionDelegateWithPresenterAdapter: ARPlacerSessionDelegate {
     private var delegate: ARPlacerSessionDelegate!
     private var presenter: ARPlacerInformationPresenter!
     
@@ -37,11 +37,11 @@ public class ARPlacerSessionDelegateWithPresenterAdapter: NSObject, ARSCNViewDel
         }
     }
     
-    public func session(_ session: ARSession, cameraDidChangeTrackingState camera: ARCamera) {
+    public override func session(_ session: ARSession, cameraDidChangeTrackingState camera: ARCamera) {
         self.delegate.session(session, cameraDidChangeTrackingState: camera)
     }
     
-    public func session(_ session: ARSession, didFailWithError error: Error) {
+    public override func session(_ session: ARSession, didFailWithError error: Error) {
         self.delegate.session(session, didFailWithError: error)
     }
 }
