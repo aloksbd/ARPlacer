@@ -28,6 +28,15 @@ class ARPlacerInformationPresenterTests: XCTestCase {
         XCTAssertEqual(view.message, information)
     }
     
+    func test_displaysPlacingInformation() {
+        let (view, sut) = makeSUT()
+        let information = "Tap to place a random object"
+        
+        sut.showPlacingInformation()
+        
+        XCTAssertEqual(view.message, information)
+    }
+    
     func test_displaysErrorWhenSessionFails() {
         let (view, sut) = makeSUT()
         let error = "Some Error"
@@ -54,6 +63,10 @@ class ARPlacerInformationPresenterTests: XCTestCase {
         
         func display(error: String) {
             message = error
+        }
+        
+        func displayAndHide(information: String) {
+            message = information
         }
     }
 

@@ -7,4 +7,5 @@
 
 public protocol InformationView {
     func display(information: String)
+    func displayAndHide(information: String)
 }

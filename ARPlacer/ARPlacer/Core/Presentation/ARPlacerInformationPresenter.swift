@@ -14,6 +14,9 @@ public class ARPlacerInformationPresenter {
     private var limitedTrackingInformation: String {
         "Camera Tracking is off. \nPlease move your camera slowly to scan the surrounding"
     }
+    private var placingInformation: String {
+        "Tap to place a random object"
+    }
     
     public init(informationView: InformationView, errorView: ErrorView) {
         self.informationView = informationView
@@ -26,6 +29,10 @@ public class ARPlacerInformationPresenter {
     
     public func showLimitedTrackingInformation() {
         informationView.display(information: limitedTrackingInformation)
+    }
+    
+    public func showPlacingInformation() {
+        informationView.displayAndHide(information: placingInformation)
     }
     
     public func sessionFailed(with error: String) {
