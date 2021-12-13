@@ -7,4 +7,5 @@
 
 public protocol ErrorView {
     func display(error: String)
+    func displayAndHide(error: String)
 }

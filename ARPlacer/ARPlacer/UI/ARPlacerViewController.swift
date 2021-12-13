@@ -43,6 +43,15 @@ extension ARPlacerViewController: InformationView, ErrorView {
         }
     }
     
+    public func displayAndHide(error: String) {
+        textLabel.isHidden = false
+        textLabel.textColor = .systemRed
+        textLabel.text = error
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            self.textLabel.isHidden = true
+        }
+    }
+    
     public func display(error: String) {
         textLabel.isHidden = false
         textLabel.textColor = .systemRed
