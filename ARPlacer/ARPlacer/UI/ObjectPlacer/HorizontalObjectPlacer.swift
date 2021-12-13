@@ -10,17 +10,17 @@ import ARKit
 public class HorizontalObjectPlacer: ObjectPlacer {
     public init() { }
     
-    public func place(in sceneView: ARSCNView, at position: CGPoint) -> Bool {
-        guard let raycastQuery = raycastQuery(on: sceneView, from: position) else { return false }
-        guard let raycastResult = firstRaycastQueryResult(from: raycastQuery, on: sceneView) else { return false }
+    public func place(in sceneView: ARSCNView, at position: CGPoint) -> Object? {
+        guard let raycastQuery = raycastQuery(on: sceneView, from: position) else { return nil }
+        guard let raycastResult = firstRaycastQueryResult(from: raycastQuery, on: sceneView) else { return nil }
         
-        let node = RandomObjectCreator.create()
-        node.position = raycastPositionOnARWorld(raycastResult: raycastResult)
+        let object = RandomObjectCreator.create()
+        object.position = raycastPositionOnARWorld(raycastResult: raycastResult)
         
         // to place node on surface of horizontal plane
-        movePivotToBottomOfNode(node: node)
-        sceneView.scene.rootNode.addChildNode(node)
-        return true
+        movePivotToBottomOfNode(node: object)
+        sceneView.scene.rootNode.addChildNode(object)
+        return object
     }
     
     private func raycastQuery(on sceneView: ARSCNView, from position: CGPoint) -> ARRaycastQuery? {

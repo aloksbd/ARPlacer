@@ -8,5 +8,5 @@
 import ARKit
 
 public protocol ObjectPlacer {
-    func place(in sceneView: ARSCNView, at position: CGPoint) -> Bool
+    func place(in sceneView: ARSCNView, at position: CGPoint) -> Object?
 }

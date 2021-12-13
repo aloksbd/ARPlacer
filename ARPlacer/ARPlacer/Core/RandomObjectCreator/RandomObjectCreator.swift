@@ -10,13 +10,13 @@ import SceneKit
 public class RandomObjectCreator {
     private(set) public static var randomNumberGenerator = { Int.random(in: 0...RandomObject.count) }
     
-    public static func create(randomNumberGenerator: () -> Int = randomNumberGenerator) -> SCNNode {
+    public static func create(randomNumberGenerator: () -> Int = randomNumberGenerator) -> Object {
         let randomNumber = randomNumberGenerator()
-        guard let randomObject = RandomObject(rawValue: randomNumber) else { return SCNNode() }
+        guard let randomObject = RandomObject(rawValue: randomNumber) else { return Object() }
         return createNode(for: randomObject)
     }
     
-    private static func createNode(for randomObject: RandomObject) -> SCNNode {
+    private static func createNode(for randomObject: RandomObject) -> Object {
         switch randomObject {
         case .sphere:
             return createSphere()
@@ -27,19 +27,19 @@ public class RandomObjectCreator {
         }
     }
     
-    private static func createSphere() -> SCNNode {
+    private static func createSphere() -> Object {
         let sphere = SCNSphere(radius: 0.05)
         giveRandomColor(geometry: sphere)
         return createNode(geometry: sphere)
     }
     
-    private static func createBox() -> SCNNode {
+    private static func createBox() -> Object {
         let box = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
         giveRandomColor(geometry: box)
         return createNode(geometry: box)
     }
     
-    private static func createTorus() -> SCNNode {
+    private static func createTorus() -> Object {
         let torus = SCNTorus(ringRadius: 0.05, pipeRadius: 0.02)
         giveRandomColor(geometry: torus)
         return createNode(geometry: torus)
