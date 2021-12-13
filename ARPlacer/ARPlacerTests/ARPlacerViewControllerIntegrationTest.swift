@@ -38,8 +38,8 @@ class ARPlacerViewControllerIntegrationTest: XCTestCase {
     }
     
     private class ObjectPlacerSpy: ObjectPlacer {
-        func place(in sceneView: ARSCNView, at position: CGPoint) -> Bool {
-            return true
+        func place(in sceneView: ARSCNView, at position: CGPoint) -> Object? {
+            return nil
         }
     }
 }

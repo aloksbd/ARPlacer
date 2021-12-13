@@ -46,6 +46,15 @@ class ARPlacerInformationPresenterTests: XCTestCase {
         XCTAssertEqual(view.message, error)
     }
     
+    func test_displaysCannotPlaceError() {
+        let (view, sut) = makeSUT()
+        let error = "Cannot place object. Maybe the surface you are pointing is too far or too plain."
+        
+        sut.cannotPlaceObject()
+        
+        XCTAssertEqual(view.message, error)
+    }
+    
     //MARK: Helpers
     
     private func makeSUT() -> (view: InformationViewSpy, sut: ARPlacerInformationPresenter){
@@ -67,6 +76,10 @@ class ARPlacerInformationPresenterTests: XCTestCase {
         
         func displayAndHide(information: String) {
             message = information
+        }
+        
+        func displayAndHide(error: String) {
+            message = error
         }
     }
 
