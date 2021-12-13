@@ -106,6 +106,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C9E2E592767BF0C002E410E /* Main App */ = {
+			isa = PBXGroup;
+			children = (
+				5CA925B5274E39D70026F0A7 /* AppDelegate.swift */,
+				5CA9260C2753E6280026F0A7 /* ARPlacerViewControllerComposer.swift */,
+				5CAA4CCD275685CA008BC4DB /* ARPlacerSessionDelegateWithPresenterAdapter.swift */,
+				5CB26C7F276750F300A8B54A /* ARPlacerSessionDelegateWithObjetDistanceControllerAdapter.swift */,
+				5CB26C7D27674FE500A8B54A /* ObjectPlacerWithFallbackDecorator.swift */,
+				5C9E2E572767B74E002E410E /* ARPlacerSceneViewControllerDelegateImpl.swift */,
+			);
+			path = "Main App";
+			sourceTree = "<group>";
+		};
 		5CA925A9274E39D70026F0A7 = {
 			isa = PBXGroup;
 			children = (
@@ -127,14 +140,7 @@
 		5CA925B4274E39D70026F0A7 /* ARPlacer */ = {
 			isa = PBXGroup;
 			children = (
-				5CA925B5274E39D70026F0A7 /* AppDelegate.swift */,
-				5CA9260C2753E6280026F0A7 /* ARPlacerViewControllerComposer.swift */,
-				5CAA4CCD275685CA008BC4DB /* ARPlacerSessionDelegateWithPresenterAdapter.swift */,
-				5CB26C7F276750F300A8B54A /* ARPlacerSessionDelegateWithObjetDistanceControllerAdapter.swift */,
-				5CB26C7D27674FE500A8B54A /* ObjectPlacerWithFallbackDecorator.swift */,
-				5C9E2E572767B74E002E410E /* ARPlacerSceneViewControllerDelegateImpl.swift */,
-				5CA925BE274E39DA0026F0A7 /* Assets.xcassets */,
-				5CA925C0274E39DA0026F0A7 /* LaunchScreen.storyboard */,
+				5C9E2E592767BF0C002E410E /* Main App */,
 				5CA925D8274E4F950026F0A7 /* Core */,
 				5CA925F1274FA2EA0026F0A7 /* UI */,
 			);
@@ -196,6 +202,8 @@
 		5CA925F1274FA2EA0026F0A7 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				5CA925BE274E39DA0026F0A7 /* Assets.xcassets */,
+				5CA925C0274E39DA0026F0A7 /* LaunchScreen.storyboard */,
 				5CA925F9275145780026F0A7 /* ObjectPlacer */,
 				5CA925F2274FA3010026F0A7 /* ARPlacerSceneViewController.swift */,
 				5CA925B9274E39D70026F0A7 /* ARPlacerViewController.swift */,
