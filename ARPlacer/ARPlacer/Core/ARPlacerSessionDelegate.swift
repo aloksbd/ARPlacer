@@ -13,6 +13,8 @@ public class ARPlacerSessionDelegate: NSObject, ARSCNViewDelegate {
     public var onNotAvailable: (() -> Void)?
     public var onNormal: (() -> Void)?
     
+    public var update: (() -> Void)?
+    
     public func session(_ session: ARSession, didFailWithError error: Error) {
         sessionFailedWithError?(error.localizedDescription)
     }
@@ -26,5 +28,9 @@ public class ARPlacerSessionDelegate: NSObject, ARSCNViewDelegate {
         case .normal:
             onNormal?()
         }
+    }
+    
+    public func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
+        update?()
     }
 }

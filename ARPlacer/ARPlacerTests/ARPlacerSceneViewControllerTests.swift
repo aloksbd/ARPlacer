@@ -12,17 +12,21 @@ import ARKit
 class ARPlacerSceneViewControllerTests: XCTestCase {
     private var sut: ARPlacerSceneViewController?
     private var sceneView: ARSCNView?
+    private var delegate: ARPlacerSceneViewControllerDelegateSpy?
     private var objectPlacer: ObjectPlacerSpy?
     
     override func setUp() {
         objectPlacer = ObjectPlacerSpy()
         sceneView = ARSCNView()
+        delegate = ARPlacerSceneViewControllerDelegateSpy()
         sut = ARPlacerSceneViewController(sceneView: sceneView!, objectPlacer: objectPlacer!)
+        sut?.delegate = delegate
     }
     
     override func tearDown() {
         objectPlacer = nil
         sceneView = nil
+        delegate = nil
         sut = nil
     }
     
@@ -47,7 +51,7 @@ class ARPlacerSceneViewControllerTests: XCTestCase {
     
     func test_notifiesIfObjectCouldNotBePlacedOnTap() {
         let exp = expectation(description: "Wait for notification")
-        sut?.cannotPlaceAnchor = {
+        delegate?.cannotPlaceAnchorCallback = {
             exp.fulfill()
         }
         sceneView?.simulateTap()
@@ -56,22 +60,52 @@ class ARPlacerSceneViewControllerTests: XCTestCase {
         XCTAssertEqual(objectPlacer?.callCount, 1)
     }
     
+    func test_notifiesWithObjectPlacedOnTap() {
+        let exp = expectation(description: "Wait for notification")
+        let expectedObject = Object()
+        delegate?.objectPlacedCallback = { receivedObject in
+            XCTAssertEqual(expectedObject, receivedObject)
+            exp.fulfill()
+        }
+        sceneView?.simulateTap()
+        objectPlacer?.simulateObjectPlaced(object: expectedObject)
+        wait(for: [exp], timeout: 1)
+        XCTAssertEqual(objectPlacer?.callCount, 1)
+    }
+    
     //MARK: Helpers
     
     private class ObjectPlacerSpy: ObjectPlacer {
         private(set) var callCount = 0
-        private var placeObject = true
+        private var placeObject: Object?
         
         var onPlaceCall: (() -> Void)?
         
-        func place(in sceneView: ARSCNView, at position: CGPoint) -> Bool {
+        func place(in sceneView: ARSCNView, at position: CGPoint) -> Object? {
             callCount += 1
             onPlaceCall?()
             return placeObject
         }
         
         func simulateFailToPlaceObject() {
-            placeObject = false
+            placeObject = nil
+        }
+        
+        func simulateObjectPlaced(object: Object) {
+            placeObject = object
+        }
+    }
+    
+    private class ARPlacerSceneViewControllerDelegateSpy: ARPlacerSceneViewControllerDelegate {
+        var cannotPlaceAnchorCallback: (() -> Void)?
+        var objectPlacedCallback: ((Object) -> Void)?
+        
+        func cannotPlaceAnchor() {
+            cannotPlaceAnchorCallback?()
+        }
+        
+        func placedObject(_ object: Object) {
+            objectPlacedCallback?(object)
         }
     }
 }

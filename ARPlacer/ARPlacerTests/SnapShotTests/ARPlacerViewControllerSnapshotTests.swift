@@ -16,7 +16,6 @@ class FeedSnapshotTests: XCTestCase {
         sut.display(information: "This is a\nmultiline\ninformation.")
 
         assert(snapshot: sut.snapshot(for: .iPhone8(style: .light)), named: "INFORMATION_light")
-        assert(snapshot: sut.snapshot(for: .iPhone8(style: .dark)), named: "INFORMATION_dark")
     }
     
     func test_error() {
@@ -25,7 +24,6 @@ class FeedSnapshotTests: XCTestCase {
         sut.display(error: "This is a\nmultiline\nerror.")
 
         assert(snapshot: sut.snapshot(for: .iPhone8(style: .light)), named: "ERROR_light")
-        assert(snapshot: sut.snapshot(for: .iPhone8(style: .dark)), named: "ERROR_dark")
     }
     
     func test_errorAfterInformation() {
@@ -56,8 +54,8 @@ class FeedSnapshotTests: XCTestCase {
     }
     
     private class ObjectPlacerSpy: ObjectPlacer {
-        func place(in sceneView: ARSCNView, at position: CGPoint) -> Bool {
-            return true
+        func place(in sceneView: ARSCNView, at position: CGPoint) -> Object? {
+            return nil
         }
     }
 }

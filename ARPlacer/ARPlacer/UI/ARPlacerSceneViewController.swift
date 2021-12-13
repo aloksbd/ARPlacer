@@ -7,16 +7,24 @@
 
 import ARKit
 
+public protocol ARPlacerSceneViewControllerDelegate {
+    func cannotPlaceAnchor()
+    func placedObject(_ object: Object)
+}
+
 public class ARPlacerSceneViewController {
     private let sceneView: ARSCNView
-    private var delegate: ARSCNViewDelegate?
+    
+    // storing delegate as it is optional in sceneView and gets deinit immediately
+    private var sceneViewDelegate: ARSCNViewDelegate?
     private let objectPlacer: ObjectPlacer
-    public var cannotPlaceAnchor: (() -> Void)?
+    
+    public var delegate: ARPlacerSceneViewControllerDelegate!
     
     public init(sceneView: ARSCNView, objectPlacer: ObjectPlacer) {
         self.sceneView = sceneView
         self.objectPlacer = objectPlacer
-        self.delegate = sceneView.delegate
+        self.sceneViewDelegate = sceneView.delegate
         addTapGestureRecognizer()
     }
     
@@ -27,10 +35,11 @@ public class ARPlacerSceneViewController {
     
     @objc private func tap(_ gesture: UITapGestureRecognizer) {
         let tappedPosition = gesture.location(in: sceneView)
-        guard objectPlacer.place(in: sceneView, at: tappedPosition) else {
-            cannotPlaceAnchor?()
+        guard let object = objectPlacer.place(in: sceneView, at: tappedPosition) else {
+            delegate.cannotPlaceAnchor()
             return
         }
+        delegate.placedObject(object)
     }
     
     func runSession() {

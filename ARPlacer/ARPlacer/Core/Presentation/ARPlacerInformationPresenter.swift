@@ -17,6 +17,9 @@ public class ARPlacerInformationPresenter {
     private var placingInformation: String {
         "Tap to place a random object"
     }
+    private var cannotPlaceError: String {
+        "Cannot place object. Maybe the surface you are pointing is too far or too plain."
+    }
     
     public init(informationView: InformationView, errorView: ErrorView) {
         self.informationView = informationView
@@ -37,5 +40,9 @@ public class ARPlacerInformationPresenter {
     
     public func sessionFailed(with error: String) {
         errorView.display(error: error)
+    }
+    
+    public func cannotPlaceObject() {
+        errorView.displayAndHide(error: cannotPlaceError)
     }
 }

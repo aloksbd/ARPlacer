@@ -10,19 +10,19 @@ import ARKit
 public class VerticalObjectPlacer: ObjectPlacer {
     public init() { }
     
-    public func place(in sceneView: ARSCNView, at position: CGPoint) -> Bool {
-        guard let raycastQuery = raycastQuery(on: sceneView, from: position) else { return false }
-        guard let raycastResult = firstRaycastQueryResult(from: raycastQuery, on: sceneView) else { return false }
+    public func place(in sceneView: ARSCNView, at position: CGPoint) -> Object? {
+        guard let raycastQuery = raycastQuery(on: sceneView, from: position) else { return nil }
+        guard let raycastResult = firstRaycastQueryResult(from: raycastQuery, on: sceneView) else { return nil }
         
-        let node = RandomObjectCreator.create()
+        let object = RandomObjectCreator.create()
         
         // making sure object is placed on the vertical plane facing away from it.
-        node.simdTransform = raycastResult.worldTransform
+        object.simdTransform = raycastResult.worldTransform
         
         // to place node on surface of vertical plane
-        movePivotToBottomOfNode(node: node)
-        sceneView.scene.rootNode.addChildNode(node)
-        return true
+        movePivotToBottomOfNode(node: object)
+        sceneView.scene.rootNode.addChildNode(object)
+        return object
     }
     
     private func raycastQuery(on sceneView: ARSCNView, from position: CGPoint) -> ARRaycastQuery? {
