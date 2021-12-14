@@ -12,8 +12,7 @@ I also want to see the distance between AR object and my phone.
 ### 1. Scan the real world.
 **Primary course:**
 1. When the app opens, system should automatically start scanning the surrounding.
-2. System should show feature points.
-3. System should show user they can tap to place random object over the real world.
+2. System should show user they can tap to place random object over the real world.
 
 **Side Effect:**
 1. System should continue scanning the area throughout the app’s life time.
