@@ -25,9 +25,7 @@ public class Object: SCNNode {
         let position = simdTransform.columns.3
         guard let currentFrame = sceneView.session.currentFrame else { return nil }
         let cameraPosition = currentFrame.camera.transform.columns.3
-        let distanceInMeter = simd_distance(position, cameraPosition)
-        let distanceInCM = distanceInMeter * 100
-        let roundedDistance = round(distanceInCM * 10) / 10.0
-        return roundedDistance
+        let distance = simd_distance(position, cameraPosition) * 100
+        return round(distance * 10) / 10.0
     }
 }
