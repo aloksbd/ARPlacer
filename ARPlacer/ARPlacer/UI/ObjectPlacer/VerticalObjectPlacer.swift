@@ -11,8 +11,9 @@ public class VerticalObjectPlacer: ObjectPlacer {
     public init() { }
     
     public func place(in sceneView: ARSCNView, at position: CGPoint) -> Object? {
-        guard let raycastQuery = raycastQuery(on: sceneView, from: position) else { return nil }
-        guard let raycastResult = firstRaycastQueryResult(from: raycastQuery, on: sceneView) else { return nil }
+        guard let raycastQuery = sceneView.raycastQuery(from: position, allowing: .estimatedPlane, alignment: .vertical),
+              let raycastResult = sceneView.session.raycast(raycastQuery).first
+        else { return nil }
         
         let object = RandomObjectCreator.create()
         
@@ -20,22 +21,8 @@ public class VerticalObjectPlacer: ObjectPlacer {
         object.simdTransform = raycastResult.worldTransform
         
         // to place node on surface of vertical plane
-        movePivotToBottomOfNode(node: object)
+        object.movePivotToBottomOfNode()
         sceneView.scene.rootNode.addChildNode(object)
         return object
     }
-    
-    private func raycastQuery(on sceneView: ARSCNView, from position: CGPoint) -> ARRaycastQuery? {
-        return sceneView.raycastQuery(from: position, allowing: .estimatedPlane, alignment: .vertical)
-    }
-    
-    private func firstRaycastQueryResult(from raycastQuery: ARRaycastQuery, on sceneView: ARSCNView) -> ARRaycastResult? {
-        return sceneView.session.raycast(raycastQuery).first
-    }
-    
-    private func movePivotToBottomOfNode(node: SCNNode) {
-        let halfOfHeightOfNode = node.boundingBox.max.y
-        node.pivot = SCNMatrix4MakeTranslation(0, -halfOfHeightOfNode, 0)
-    }
 }
-

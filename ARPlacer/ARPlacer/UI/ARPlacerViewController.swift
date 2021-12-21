@@ -35,32 +35,32 @@ public class ARPlacerViewController: UIViewController {
 
 extension ARPlacerViewController: InformationView, ErrorView {
     public func displayAndHide(information: String) {
-        textLabel.isHidden = false
-        textLabel.textColor = .systemBackground
-        textLabel.text = information
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            self.textLabel.isHidden = true
-        }
+        display(text: information, backgroundColor: .systemBackground)
+        hideTextLabelAfter()
     }
     
     public func displayAndHide(error: String) {
-        textLabel.isHidden = false
-        textLabel.textColor = .systemRed
-        textLabel.text = error
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            self.textLabel.isHidden = true
-        }
+        display(text: error, backgroundColor: .systemRed)
+        hideTextLabelAfter()
     }
     
     public func display(error: String) {
-        textLabel.isHidden = false
-        textLabel.textColor = .systemRed
-        textLabel.text = error
+        display(text: error, backgroundColor: .systemRed)
     }
     
     public func display(information: String) {
+        display(text: information, backgroundColor: .systemBackground)
+    }
+    
+    private func display(text: String, backgroundColor: UIColor) {
         textLabel.isHidden = false
-        textLabel.textColor = .systemBackground
-        textLabel.text = information
+        textLabel.textColor = backgroundColor
+        textLabel.text = text
+    }
+    
+    private func hideTextLabelAfter(duration: DispatchTime = .now() + 5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            self.textLabel.isHidden = true
+        }
     }
 }
