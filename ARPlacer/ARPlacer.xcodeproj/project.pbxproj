@@ -21,7 +21,6 @@
 		5CA925E2274E5E0D0026F0A7 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925E1274E5E0D0026F0A7 /* ErrorView.swift */; };
 		5CA925E4274F274E0026F0A7 /* RandomObjectCreatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925E3274F274E0026F0A7 /* RandomObjectCreatorTests.swift */; };
 		5CA925E6274F2CD10026F0A7 /* RandomObjectCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925E5274F2CD10026F0A7 /* RandomObjectCreator.swift */; };
-		5CA925E9274F2F460026F0A7 /* RandomObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925E8274F2F460026F0A7 /* RandomObject.swift */; };
 		5CA925F0274F9DDE0026F0A7 /* ARPlacerSceneViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925EF274F9DDE0026F0A7 /* ARPlacerSceneViewControllerTests.swift */; };
 		5CA925F3274FA3010026F0A7 /* ARPlacerSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925F2274FA3010026F0A7 /* ARPlacerSceneViewController.swift */; };
 		5CA925F62750D9DA0026F0A7 /* ARSCNView+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA925F52750D9D90026F0A7 /* ARSCNView+TestHelpers.swift */; };
@@ -39,6 +38,11 @@
 		5CB26C7C276733CB00A8B54A /* ObjectDistanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB26C7B276733CB00A8B54A /* ObjectDistanceController.swift */; };
 		5CB26C7E27674FEB00A8B54A /* ObjectPlacerWithFallbackDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB26C7D27674FE500A8B54A /* ObjectPlacerWithFallbackDecorator.swift */; };
 		5CB26C80276750F300A8B54A /* ARPlacerSessionDelegateWithObjetDistanceControllerAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB26C7F276750F300A8B54A /* ARPlacerSessionDelegateWithObjetDistanceControllerAdapter.swift */; };
+		5CC14ADA2771A94E00B6B96D /* ObjectCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC14AD92771A94E00B6B96D /* ObjectCreator.swift */; };
+		5CC14ADC2771A95F00B6B96D /* SphereCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC14ADB2771A95F00B6B96D /* SphereCreator.swift */; };
+		5CC14ADE2771A97400B6B96D /* BoxCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC14ADD2771A97400B6B96D /* BoxCreator.swift */; };
+		5CC14AE02771A97C00B6B96D /* TorusCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC14ADF2771A97C00B6B96D /* TorusCreator.swift */; };
+		5CC14AE32771A9AD00B6B96D /* UIColor+RandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC14AE22771A9AD00B6B96D /* UIColor+RandomColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +72,6 @@
 		5CA925E1274E5E0D0026F0A7 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		5CA925E3274F274E0026F0A7 /* RandomObjectCreatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomObjectCreatorTests.swift; sourceTree = "<group>"; };
 		5CA925E5274F2CD10026F0A7 /* RandomObjectCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomObjectCreator.swift; sourceTree = "<group>"; };
-		5CA925E8274F2F460026F0A7 /* RandomObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomObject.swift; sourceTree = "<group>"; };
 		5CA925EF274F9DDE0026F0A7 /* ARPlacerSceneViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPlacerSceneViewControllerTests.swift; sourceTree = "<group>"; };
 		5CA925F2274FA3010026F0A7 /* ARPlacerSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPlacerSceneViewController.swift; sourceTree = "<group>"; };
 		5CA925F52750D9D90026F0A7 /* ARSCNView+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARSCNView+TestHelpers.swift"; sourceTree = "<group>"; };
@@ -86,6 +89,11 @@
 		5CB26C7B276733CB00A8B54A /* ObjectDistanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDistanceController.swift; sourceTree = "<group>"; };
 		5CB26C7D27674FE500A8B54A /* ObjectPlacerWithFallbackDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectPlacerWithFallbackDecorator.swift; sourceTree = "<group>"; };
 		5CB26C7F276750F300A8B54A /* ARPlacerSessionDelegateWithObjetDistanceControllerAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPlacerSessionDelegateWithObjetDistanceControllerAdapter.swift; sourceTree = "<group>"; };
+		5CC14AD92771A94E00B6B96D /* ObjectCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectCreator.swift; sourceTree = "<group>"; };
+		5CC14ADB2771A95F00B6B96D /* SphereCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SphereCreator.swift; sourceTree = "<group>"; };
+		5CC14ADD2771A97400B6B96D /* BoxCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxCreator.swift; sourceTree = "<group>"; };
+		5CC14ADF2771A97C00B6B96D /* TorusCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorusCreator.swift; sourceTree = "<group>"; };
+		5CC14AE22771A9AD00B6B96D /* UIColor+RandomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+RandomColor.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +172,7 @@
 		5CA925D8274E4F950026F0A7 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				5CC14AE12771A9A000B6B96D /* Helpers */,
 				5CA925D6274E4E280026F0A7 /* ARPlacerSessionDelegate.swift */,
 				5CA925DD274E54220026F0A7 /* Presentation */,
 				5CA925E7274F2F1F0026F0A7 /* RandomObjectCreator */,
@@ -193,8 +202,8 @@
 		5CA925E7274F2F1F0026F0A7 /* RandomObjectCreator */ = {
 			isa = PBXGroup;
 			children = (
+				5CC14AD82771A94000B6B96D /* ObjectCreator */,
 				5CA925E5274F2CD10026F0A7 /* RandomObjectCreator.swift */,
-				5CA925E8274F2F460026F0A7 /* RandomObject.swift */,
 			);
 			path = RandomObjectCreator;
 			sourceTree = "<group>";
@@ -246,6 +255,25 @@
 			children = (
 				5CA9260627522E030026F0A7 /* XCTestCase+Snapshot.swift */,
 				5CA9260827522E640026F0A7 /* UIViewController+Snapshot.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		5CC14AD82771A94000B6B96D /* ObjectCreator */ = {
+			isa = PBXGroup;
+			children = (
+				5CC14AD92771A94E00B6B96D /* ObjectCreator.swift */,
+				5CC14ADB2771A95F00B6B96D /* SphereCreator.swift */,
+				5CC14ADD2771A97400B6B96D /* BoxCreator.swift */,
+				5CC14ADF2771A97C00B6B96D /* TorusCreator.swift */,
+			);
+			path = ObjectCreator;
+			sourceTree = "<group>";
+		};
+		5CC14AE12771A9A000B6B96D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5CC14AE22771A9AD00B6B96D /* UIColor+RandomColor.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -352,10 +380,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C9E2E582767B74E002E410E /* ARPlacerSceneViewControllerDelegateImpl.swift in Sources */,
+				5CC14ADA2771A94E00B6B96D /* ObjectCreator.swift in Sources */,
 				5CA925E0274E56C10026F0A7 /* InformationView.swift in Sources */,
 				5CAA4CCE275685CA008BC4DB /* ARPlacerSessionDelegateWithPresenterAdapter.swift in Sources */,
+				5CC14AE32771A9AD00B6B96D /* UIColor+RandomColor.swift in Sources */,
 				5CA925E2274E5E0D0026F0A7 /* ErrorView.swift in Sources */,
 				5CA925F3274FA3010026F0A7 /* ARPlacerSceneViewController.swift in Sources */,
+				5CC14ADE2771A97400B6B96D /* BoxCreator.swift in Sources */,
 				5CA925F82751451E0026F0A7 /* ObjectPlacer.swift in Sources */,
 				5CA925FD275151A30026F0A7 /* NonPlaneObjectPlacer.swift in Sources */,
 				5CA925BA274E39D70026F0A7 /* ARPlacerViewController.swift in Sources */,
@@ -364,13 +395,14 @@
 				5CA925FF27515FCA0026F0A7 /* HorizontalObjectPlacer.swift in Sources */,
 				5CA9260D2753E6290026F0A7 /* ARPlacerViewControllerComposer.swift in Sources */,
 				5CA925E6274F2CD10026F0A7 /* RandomObjectCreator.swift in Sources */,
-				5CA925E9274F2F460026F0A7 /* RandomObject.swift in Sources */,
 				5CA92601275165D00026F0A7 /* VerticalObjectPlacer.swift in Sources */,
 				5CA925B6274E39D70026F0A7 /* AppDelegate.swift in Sources */,
 				5CB26C7E27674FEB00A8B54A /* ObjectPlacerWithFallbackDecorator.swift in Sources */,
 				5CAA4CD2275A0034008BC4DB /* Object.swift in Sources */,
+				5CC14AE02771A97C00B6B96D /* TorusCreator.swift in Sources */,
 				5CA925D7274E4E280026F0A7 /* ARPlacerSessionDelegate.swift in Sources */,
 				5CB26C80276750F300A8B54A /* ARPlacerSessionDelegateWithObjetDistanceControllerAdapter.swift in Sources */,
+				5CC14ADC2771A95F00B6B96D /* SphereCreator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

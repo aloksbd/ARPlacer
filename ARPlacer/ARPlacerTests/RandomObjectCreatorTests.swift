@@ -12,19 +12,19 @@ import SceneKit
 class RandomObjectCreatorTests: XCTestCase {
     
     func test_createReturnsSphereWhenRandomNumberIsRawValueForSphere() {
-        let rawValueForSphere = RandomObject.sphere.rawValue
+        let rawValueForSphere = 1
         let node = RandomObjectCreator.create(randomNumberGenerator: { rawValueForSphere })
         XCTAssert(node.geometry is SCNSphere)
     }
     
     func test_createReturnsBoxWhenRandomNumberIsRawValueForBox() {
-        let rawValueForBox = RandomObject.box.rawValue
+        let rawValueForBox = 2
         let node = RandomObjectCreator.create(randomNumberGenerator: { rawValueForBox })
         XCTAssert(node.geometry is SCNBox)
     }
     
     func test_createReturnsTorusWhenRandomNumberIsRawValueForTorus() {
-        let rawValueForTorus = RandomObject.torus.rawValue
+        let rawValueForTorus = 3
         let node = RandomObjectCreator.create(randomNumberGenerator: { rawValueForTorus })
         XCTAssert(node.geometry is SCNTorus)
     }
