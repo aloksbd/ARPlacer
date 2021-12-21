@@ -43,6 +43,8 @@
 		5CC14ADE2771A97400B6B96D /* BoxCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC14ADD2771A97400B6B96D /* BoxCreator.swift */; };
 		5CC14AE02771A97C00B6B96D /* TorusCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC14ADF2771A97C00B6B96D /* TorusCreator.swift */; };
 		5CC14AE32771A9AD00B6B96D /* UIColor+RandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC14AE22771A9AD00B6B96D /* UIColor+RandomColor.swift */; };
+		5CC14AE62771AF3C00B6B96D /* ARRaycastResult+Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC14AE52771AF3C00B6B96D /* ARRaycastResult+Position.swift */; };
+		5CC14AE82771AF6100B6B96D /* SCNNode+MovePivot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC14AE72771AF6100B6B96D /* SCNNode+MovePivot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +96,8 @@
 		5CC14ADD2771A97400B6B96D /* BoxCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxCreator.swift; sourceTree = "<group>"; };
 		5CC14ADF2771A97C00B6B96D /* TorusCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorusCreator.swift; sourceTree = "<group>"; };
 		5CC14AE22771A9AD00B6B96D /* UIColor+RandomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+RandomColor.swift"; sourceTree = "<group>"; };
+		5CC14AE52771AF3C00B6B96D /* ARRaycastResult+Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARRaycastResult+Position.swift"; sourceTree = "<group>"; };
+		5CC14AE72771AF6100B6B96D /* SCNNode+MovePivot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNNode+MovePivot.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +237,7 @@
 		5CA925F9275145780026F0A7 /* ObjectPlacer */ = {
 			isa = PBXGroup;
 			children = (
+				5CC14AE42771AF2900B6B96D /* Helpers */,
 				5CA925F72751451D0026F0A7 /* ObjectPlacer.swift */,
 				5CA925FC275151A30026F0A7 /* NonPlaneObjectPlacer.swift */,
 				5CA925FE27515FCA0026F0A7 /* HorizontalObjectPlacer.swift */,
@@ -274,6 +279,15 @@
 			isa = PBXGroup;
 			children = (
 				5CC14AE22771A9AD00B6B96D /* UIColor+RandomColor.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		5CC14AE42771AF2900B6B96D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5CC14AE52771AF3C00B6B96D /* ARRaycastResult+Position.swift */,
+				5CC14AE72771AF6100B6B96D /* SCNNode+MovePivot.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -386,6 +400,8 @@
 				5CC14AE32771A9AD00B6B96D /* UIColor+RandomColor.swift in Sources */,
 				5CA925E2274E5E0D0026F0A7 /* ErrorView.swift in Sources */,
 				5CA925F3274FA3010026F0A7 /* ARPlacerSceneViewController.swift in Sources */,
+				5CC14AE82771AF6100B6B96D /* SCNNode+MovePivot.swift in Sources */,
+				5CC14AE62771AF3C00B6B96D /* ARRaycastResult+Position.swift in Sources */,
 				5CC14ADE2771A97400B6B96D /* BoxCreator.swift in Sources */,
 				5CA925F82751451E0026F0A7 /* ObjectPlacer.swift in Sources */,
 				5CA925FD275151A30026F0A7 /* NonPlaneObjectPlacer.swift in Sources */,
